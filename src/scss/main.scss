@@ -4,7 +4,7 @@
 @include foundation-everything(true); 
 // Import Motion UI
 @import '~motion-ui/dist/motion-ui';
-@import 'fonts_config';
-@import './colors.scss';
+@import './Utils/fonts_config';
+@import './Utils/colors.scss';
 
 @import './global.scss';
