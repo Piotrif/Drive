@@ -1,10 +1,17 @@
-// Init custom Foundation and font-awesome
-@import './app';
-// Init Foundation
+// Custom Foundation and font-awesome
+@import '~foundation-sites/scss/foundation';
+
+// Foundation
 @include foundation-everything(true); 
-// Import Motion UI
+
+// Motion UI
 @import '~motion-ui/dist/motion-ui';
-@import './Utils/fonts_config';
+
+// Fonts
+@import './Utils/fonts';
+
+// Colors
 @import './Utils/colors.scss';
 
+// global
 @import './global.scss';
