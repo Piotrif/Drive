@@ -72,3 +72,28 @@ h6 {
   margin-bottom: 0;
   max-width: 71.875em;
 }
+
+
+
+
+
+/**********************************/
+/*            FLEXBOX             */
+/**********************************/
+
+.flexbox-center {
+  display:flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.flex-row {
+  flex-direction:row;
+}
