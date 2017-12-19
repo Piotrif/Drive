@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Default from '@/pages/default'
+import Login from '@/pages/login'
 import Forside from '@/pages/forside'
 import Henvendelse from '@/pages/henvendelse'
 import Opgave from '@/pages/opgave'
@@ -13,8 +13,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'default',
-      component: Default
+      name: 'login',
+      component: Login
     },
     {
       path: '/forside',
