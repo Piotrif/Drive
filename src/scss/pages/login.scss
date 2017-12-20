@@ -95,20 +95,3 @@
         }
     }
 }
-
-.flex-div {
-    padding: 1em;
-    min-height: 100vh;
-    height: 100vh;
-    align-items: center;
-    display: flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}

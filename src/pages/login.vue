@@ -21,7 +21,7 @@
                     </svg>
                     <input type="password" class="password" placeholder="Adgangskode" v-model="user.password">
                 </div>
-                <button type="submit" class="button call-to-action">Log ind</button>
+                <button type="submit" class="button">Log ind</button>
             </form>
 
             <div class="bottom">

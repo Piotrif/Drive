@@ -72,6 +72,22 @@ h6 {
   float: right;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.overflow {
+  overflow-y: auto;
+}
+
 .niraslogo {
   width: 80px;
 }
@@ -85,6 +101,23 @@ h6 {
   max-width: 71.875em;
 }
 
+.content-left {
+  width: 100%;
+  margin-left: 0;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 71.875em;
+}
+
+.required {
+  color: $red;
+}
+
+.full-height {
+  height: 100%;
+}
+
 
 
 
@@ -94,10 +127,9 @@ h6 {
 /**********************************/
 
 .flexbox-center {
-  display:flex;
+  display: flex;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -108,4 +140,20 @@ h6 {
 
 .flex-row {
   flex-direction:row;
+}
+
+.flex-div {
+  min-height: 100vh;
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
