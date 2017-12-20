@@ -6,14 +6,17 @@
 
         & .login-container {
             margin-top: 20px;
+            width: 300px;
 
             & .input-svg {
                 position: relative;
 
                 & input {
-                    padding-left: 3.5rem;
-                    padding-top: 1.4rem;
-                    padding-bottom: 1.4rem;
+                    height: 50px;
+                    padding-left: 50px;
+                    border: 0;
+                    width: 300px;
+                    box-shadow: 0px 2px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.07), 0px 1px 4px 0px rgba(0, 0, 0, 0.10);
                 }
 
                 & svg {
@@ -24,6 +27,10 @@
                     fill: $dark-gray;
                 }
             }
+
+            & .button {
+                padding: 19px 28px;
+            }
         }
 
         & .bottom {
@@ -32,6 +39,12 @@
             left: 0;
             right: 0;
             text-align: center;
+
+            & .niraslogo {
+                vertical-align: 17px;
+                display: inline-block;
+                margin-right: 10px;
+            }
         }
     }
     
@@ -61,6 +74,7 @@
                 -o-filter: blur(3px);
                 -ms-filter: blur(3px);
                 filter: blur(3px);
+                filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
             }
         }
 
@@ -85,6 +99,7 @@
 .flex-div {
     padding: 1em;
     min-height: 100vh;
+    height: 100vh;
     align-items: center;
     display: flex;
     display: -webkit-box;

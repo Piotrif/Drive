@@ -16,5 +16,10 @@
 // Global
 @import './global.scss';
 
+// Components
+@import './components/input.scss';
+@import './components/button.scss';
+@import './components/modal.scss';
+
 // Pages
 @import './pages/login.scss';
