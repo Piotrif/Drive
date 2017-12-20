@@ -181,22 +181,79 @@
                                 <img src="./../assets/svg/file-text.svg" alt="file text svg" class="file-text-svg">
                             </div>
                             <div class="large-2 medium-2 small-2 cell border-bottom">
-                                <p>Kontakttype<span class="required">*</span></p>
+                                <p>Ejendomstype</p>
                             </div>
                             <div class="auto cell border-bottom">
-                                <select v-model="review.contacttype" id="select">
-                                    <option value="0" disabled="disabled">Vælg Kontakttype i listen</option>
-                                    <option v-for="(contacttype, index) in contacttypes" :selected="selected" v-bind:key="index" :value="contacttype.id">
-                                        {{contacttype.name}}
+                                <select v-model="problem.propertytype" id="select">
+                                    <option value="0" disabled="disabled">Vælg ejendomstype i listen</option>
+                                    <option v-for="(propertytype, index) in propertytypes" :selected="selected" v-bind:key="index" :value="propertytype.id">
+                                        {{propertytype.name}}
                                     </option>
                                 </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form">
+                        <div class="grid-x">
+                            <div class="large-1 medium-1 small-1 cell flexbox-center">
+                                <img src="./../assets/svg/file-text.svg" alt="file text svg" class="file-text-svg">
+                            </div>
+                            <div class="large-2 medium-2 small-2 cell border-bottom">
+                                <p>Problemtype<span class="required">*</span></p>
+                            </div>
+                            <div class="auto cell border-bottom">
+                                <select v-model="problem.problemtype" id="select">
+                                    <option value="0" disabled="disabled">Vælg ejendomstype i listen</option>
+                                    <option v-for="(problemtype, index) in problemtypes" :selected="selected" v-bind:key="index" :value="problemtype.id">
+                                        {{problemtype.name}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form">
+                        <div class="grid-x">
+                            <div class="large-1 medium-1 small-1 cell flexbox-center">
+                                <img src="./../assets/svg/file-text.svg" alt="file text svg" class="file-text-svg">
+                            </div>
+                            <div class="large-2 medium-2 small-2 cell border-bottom">
+                                <p>Vejrtype<span class="required">*</span></p>
+                            </div>
+                            <div class="auto cell border-bottom">
+                                <select v-model="problem.weathertype" id="select">
+                                    <option value="0" disabled="disabled">Vælg ejendomstype i listen</option>
+                                    <option v-for="(weathertype, index) in weathertypes" :selected="selected" v-bind:key="index" :value="weathertype.id">
+                                        {{weathertype.name}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form">
+                        <div class="grid-x">
+                            <div class="large-1 medium-1 small-1 cell flexbox-center">
+                                <img src="./../assets/svg/file-text.svg" alt="file text svg" class="file-text-svg">
+                            </div>
+                            <div class="large-2 medium-2 small-2 cell border-bottom bigger-padding">
+                                <p>Beskrivelse<span class="required">*</span></p>
+                            </div>
+                            <div class="auto cell border-bottom">
+                                <textarea v-model="problem.description" rows="4" cols="30"></textarea>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <section v-show="state == 3">
-                    <h2>Dokumenter</h2>
+                    <h2 class="">Dokumenter</h2>
+                    <p>
+                        Upload billeder og dokumenter<br />
+                        <em>F.eks. pdf, jpg, Word, Excel</em>
+                    </p>
+                    <input type="file" name="fileUpload" v-on:change="gotUpload">
                 </section>
 
                 <section v-show="state == 4">
@@ -212,8 +269,11 @@
 </template>
 
 <script>
+import FileUploadHandler from './../mixins/shared/fileupload.js';
+
 export default {
     name: 'enquiry',
+    mixins: [FileUploadHandler],
     data() {
         return {
             user: 'Niras admin',
@@ -221,6 +281,9 @@ export default {
             state: 1,
             selected: null,
             contacttypes: [],
+            propertytypes: [],
+            problemtypes: [],
+            weathertypes: [],
             selectedSupply: 'water',
             review: {
                 contacttype: '',
@@ -230,7 +293,12 @@ export default {
             },
             problem: {
                 date: '',
-                address: ''
+                address: '',
+                contacttype: '',
+                propertytype: '',
+                problemtype: '',
+                weathertype: '',
+                description: ''
             }
         }
     },
@@ -256,6 +324,27 @@ export default {
             {id: 4, name: 'Brand'},
             {id: 5, name: 'Brand og redning'},
             {id: 6, name: 'Driftspersonale'},
+        ],
+        this.propertytypes = [
+            {id: 1, name: 'Andet'},
+            {id: 2, name: 'Beboelse'},
+            {id: 3, name: 'Butik'},
+            {id: 4, name: 'Butik - lednedsmiddel'},
+            {id: 5, name: 'Byggeplads'}
+        ],
+        this.problemtypes = [
+            {id: 1, name: 'Adgangsforhold (anlægsarbejde m.v.)'},
+            {id: 2, name: 'Andet'},
+            {id: 3, name: 'Defekt dæksel'},
+            {id: 4, name: 'Fejlmelding/alarm'},
+            {id: 5, name: 'Fluer'}
+        ],
+        this.weathertypes = [
+            {id: 1, name: 'Andet'},
+            {id: 2, name: 'Ikke relevant'},
+            {id: 3, name: 'Regnvejr'},
+            {id: 4, name: 'Skybrud'},
+            {id: 5, name: 'Storm/orkan'}
         ]
     }
 }
