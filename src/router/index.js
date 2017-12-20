@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '@/pages/login'
-import Forside from '@/pages/forside'
-import Henvendelse from '@/pages/henvendelse'
-import Opgave from '@/pages/opgave'
-import Rekvisition from '@/pages/rekvisition'
-import Indstillinger from '@/pages/indstillinger'
+import Dashboard from '@/pages/dashboard'
+import Enquiry from '@/pages/enquiry'
+import Task from '@/pages/task'
+import Requisition from '@/pages/requisition'
+import Settings from '@/pages/settings'
 
 Vue.use(Router)
 
@@ -18,42 +18,42 @@ export default new Router({
     },
     {
       path: '/forside',
-      name: 'forside',
-      component: Forside
+      name: 'dashboard',
+      component: Dashboard
     },
     {
       path: '/henvendelse',
-      name: 'henvendelse',
-      component: Henvendelse
+      name: 'enquiry',
+      component: Enquiry
     },
     {
       path: '/henvendelse/:id',
-      name: 'henvendelse',
-      component: Henvendelse, 
+      name: 'enquiry',
+      component: Enquiry, 
       params: {
         id: ''
       }
     },
     {
       path: '/opgave/:id',
-      name: 'opgave',
-      component: Opgave, 
+      name: 'task',
+      component: Task, 
       params: {
         id: ''
       }
     },
     {
       path: '/entreprenoeropgave/:id',
-      name: 'rekvisition',
-      component: Rekvisition, 
+      name: 'requisition',
+      component: Requisition, 
       params: {
         id: ''
       }
     },
     {
       path: '/indstillinger',
-      name: 'indstillinger',
-      component: Indstillinger
+      name: 'settings',
+      component: Settings
     },
     {
       path: '*',
