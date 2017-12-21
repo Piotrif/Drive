@@ -72,7 +72,7 @@
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
                                 <img src="./../assets/svg/file-text.svg" alt="file text svg" class="file-text-svg">
                             </div>
-                            <div class="large-2 medium-2 small-2 cell border-bottom">
+                            <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Kontakttype<span class="required">*</span></p>
                             </div>
                             <div class="auto cell border-bottom">
@@ -91,7 +91,7 @@
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
                                 <img src="./../assets/svg/user.svg" alt="user svg" class="user-svg">
                             </div>
-                            <div class="large-2 medium-2 small-2 cell border-bottom">
+                            <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Navn</p>
                             </div>
                             <div class="auto cell border-bottom">
@@ -105,7 +105,7 @@
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
                                 <img src="./../assets/svg/user.svg" alt="user svg" class="user-svg">
                             </div>
-                            <div class="large-2 medium-2 small-2 cell border-bottom">
+                            <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Telefon</p>
                             </div>
                             <div class="auto cell border-bottom">
@@ -119,7 +119,7 @@
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
                                 <img src="./../assets/svg/mail-checked.svg" alt="email svg" class="mail-checked-svg">
                             </div>
-                            <div class="large-2 medium-2 small-2 cell border-bottom">
+                            <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>E-mail</p>
                             </div>
                             <div class="auto cell border-bottom">
@@ -137,7 +137,7 @@
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
                                 <img src="./../assets/svg/mail-checked.svg" alt="email svg" class="mail-checked-svg">
                             </div>
-                            <div class="large-2 medium-2 small-2 cell border-bottom">
+                            <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Forsyningsart</p>
                             </div>
                             <div class="auto cell border-bottom select-supply">
@@ -152,7 +152,7 @@
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
                                 <img src="./../assets/svg/mail-checked.svg" alt="email svg" class="mail-checked-svg">
                             </div>
-                            <div class="large-2 medium-2 small-2 cell border-bottom">
+                            <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Dato for problem</p>
                             </div>
                             <div class="auto cell border-bottom">
@@ -166,7 +166,7 @@
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
                                 <img src="./../assets/svg/mail-checked.svg" alt="email svg" class="mail-checked-svg">
                             </div>
-                            <div class="large-2 medium-2 small-2 cell border-bottom">
+                            <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Adresse for problem</p>
                             </div>
                             <div class="auto cell border-bottom">
@@ -180,7 +180,7 @@
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
                                 <img src="./../assets/svg/file-text.svg" alt="file text svg" class="file-text-svg">
                             </div>
-                            <div class="large-2 medium-2 small-2 cell border-bottom">
+                            <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Ejendomstype</p>
                             </div>
                             <div class="auto cell border-bottom">
@@ -199,7 +199,7 @@
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
                                 <img src="./../assets/svg/file-text.svg" alt="file text svg" class="file-text-svg">
                             </div>
-                            <div class="large-2 medium-2 small-2 cell border-bottom">
+                            <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Problemtype<span class="required">*</span></p>
                             </div>
                             <div class="auto cell border-bottom">
@@ -218,8 +218,8 @@
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
                                 <img src="./../assets/svg/file-text.svg" alt="file text svg" class="file-text-svg">
                             </div>
-                            <div class="large-2 medium-2 small-2 cell border-bottom">
-                                <p>Vejrtype<span class="required">*</span></p>
+                            <div class="large-3 medium-3 small-3 cell border-bottom">
+                                <p>Vejrtype</p>
                             </div>
                             <div class="auto cell border-bottom">
                                 <select v-model="problem.weathertype" id="select">
@@ -237,8 +237,8 @@
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
                                 <img src="./../assets/svg/file-text.svg" alt="file text svg" class="file-text-svg">
                             </div>
-                            <div class="large-2 medium-2 small-2 cell border-bottom bigger-padding">
-                                <p>Beskrivelse<span class="required">*</span></p>
+                            <div class="large-3 medium-3 small-3 cell border-bottom bigger-padding">
+                                <p>Beskrivelse</p>
                             </div>
                             <div class="auto cell border-bottom">
                                 <textarea v-model="problem.description" rows="4" cols="30"></textarea>
@@ -248,7 +248,7 @@
                 </section>
 
                 <section v-show="state == 3">
-                    <h2 class="">Dokumenter</h2>
+                    <h2 class="no-margin">Dokumenter</h2>
                     <p>
                         Upload billeder og dokumenter<br />
                         <em>F.eks. pdf, jpg, Word, Excel</em>
@@ -257,7 +257,7 @@
                 </section>
 
                 <section v-show="state == 4">
-                    <h2>Opgave</h2>
+                    <h2 class="no-margin">Opgave</h2>
                 </section>
             </div>
         </main>

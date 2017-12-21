@@ -40,7 +40,11 @@
             <div class="background-image blur"></div>
             <div class="overlay flexbox-center">
                 <div class="flex-div">
-                    <h1 class="logo">DRIVE</h1>
+                    <!-- <h1 class="logo">DRIVE</h1> -->
+                    <img src="./../assets/images/DR-logo1.png" class="img-center" alt="logo" style="width: 180px;">
+                    <!-- <img src="./../assets/images/DR-logo2.png" class="img-center" alt="logo" style="width: 180px;"> -->
+                    <!-- <img src="./../assets/images/DR-logo3.png" class="img-center" alt="logo" style="width: 180px;"> -->
+                    <!-- <img src="./../assets/images/DR-logo4.png" class="img-center" alt="logo" style="width: 180px;"> -->
                     <p>Få styr på daglig drift og vedligehold</p>
                 </div>
             </div>

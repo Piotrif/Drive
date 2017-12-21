@@ -1,4 +1,4 @@
-var formUploadHandler = {
+var fileUploadHandler = {
     methods: {
         gotUpload(event) {
             console.log("event", event)
@@ -6,4 +6,4 @@ var formUploadHandler = {
     }
 }
 
-export default formUploadHandler;
+export default fileUploadHandler;
