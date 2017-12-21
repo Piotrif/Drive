@@ -1,0 +1,17 @@
+.dashboard {
+    background-color: #fbfbfc;
+    height: 100vh;
+}
+
+.dashboard-content {
+    background-color: $white;
+    padding-top: 25px;
+    box-shadow: 0 0 3px #e5e5eb;
+    height: 100%;
+}
+
+.new-work-container {
+    & a {
+        margin: 24px 0 0 50px;
+    }
+}

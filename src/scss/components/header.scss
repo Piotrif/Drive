@@ -1,29 +1,32 @@
 /****************************/
-/*          Forside         */
+/*       DASHBOARD          */
 /****************************/
 
-.header-dashboard{
-    background-color: grey;
-    color: $white;
+.dashboard-hero-img{
+    background: url('./assets/images/vandroer.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 250px;
+    
+    &.blur {
+        -webkit-filter: blur(3px);
+        -moz-filter: blur(3px);
+        -o-filter: blur(3px);
+        -ms-filter: blur(3px);
+        filter: blur(3px);
+    }
+}
+.dashboard-header{
+    color: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    position: absolute;
     padding: 45px;
-
-    .notification-wrap{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .notification{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
+    background-color: $blur-black;
 
     .circle{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         font-size: 2rem;
         width: 70px; 
         height: 70px; 
@@ -31,7 +34,16 @@
         border-radius: 50%;
     }
 
-    // .alert{
-        
-    // }
+    // .alert{}
+}
+
+.dashboard-tabs{
+    margin-top: 30px;
+    align-items: center;
+    padding-bottom: 10px;
+    
+    button{
+        color: $white;
+        padding-left: 100px;
+    }
 }

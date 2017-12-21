@@ -1,0 +1,23 @@
+.list-counter{
+    margin-bottom: 10px;
+}
+
+.list{
+    background-color:#fbfbfc;
+    padding: 10px;
+    color: black;
+    border-left: 6px solid #b1c92d;
+    -webkit-box-shadow:0 0 3px hsla(240, 14%, 91%, 1);
+	-moz-box-shadow:0 0 3px hsla(240, 14%, 91%, 1);
+	box-shadow:0 0 3px hsla(240, 14%, 91%, 1);
+
+    .item{
+        span{
+            display: block;
+        }
+        span:last-child{
+            font-size: 0.9rem;
+            color: grey;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+/****************************/
+/*          DASHBOARD       */
+/****************************/
+
+.filter-supply{
+    display: flex;
+    align-items: center;
+
+    button{
+        width: 30px;
+        height: 30px;
+        background: #666;
+        margin-right: 10px;
+        border-radius: $border-radius-small;
+    }
+}

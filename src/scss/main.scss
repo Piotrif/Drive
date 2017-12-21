@@ -7,17 +7,19 @@
 // Motion UI
 @import '~motion-ui/dist/motion-ui';
 
-// Fonts
-@import './Utils/fonts.scss';
-
-// Colors
+// Utils
 @import './Utils/colors.scss';
+@import './Utils/fonts.scss';
+@import './utils/misc';
 
 // Global
 @import './global.scss';
 
 // Components
-@import 'Components/header.scss';
+@import './components/header.scss';
+@import './components/filtering.scss';
+@import './components/list.scss';
 
 // Pages
 @import './pages/login.scss';
+@import './pages/dashboard.scss';
