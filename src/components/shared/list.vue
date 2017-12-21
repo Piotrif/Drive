@@ -1,5 +1,5 @@
 <template>
-<div style="margin-right: 25px;">
+<div>
     <div class="grid-x list-counter">
         <span>4 henvendelser</span>
     </div>
