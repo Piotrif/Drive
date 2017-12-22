@@ -3,7 +3,7 @@
         <div class="grid-x">
             <div class="large-6 medium-6 small-6 cell">
                 <div class="text-left">
-                    <h5><b>NIRAS</b>UTILITY/DRIVE</h5>
+                    <h5><b>NIRAS</b><span class="font-lighter">UTILITY/DRIVE</span></h5>
                 </div>
             </div>
             <div class="large-6 medium-6 small-6 cell">
