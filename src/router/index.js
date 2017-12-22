@@ -35,6 +35,11 @@ export default new Router({
       }
     },
     {
+      path: '/opgave',
+      name: 'task',
+      component: Task
+    },
+    {
       path: '/opgave/:id',
       name: 'task',
       component: Task, 

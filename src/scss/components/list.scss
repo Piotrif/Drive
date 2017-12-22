@@ -15,19 +15,13 @@
         span{
             display: block;
         }
-        span:last-child{
+        span:nth-of-type(2){
             font-size: 0.9rem;
             color: $medium-gray;
         }
     }
 
     .enquiry-status {
-        width: 150px;
-        height: 30px;
-        border-radius: 30px;
-        background-color: $color-primary;
-        color: white;
-        text-align: center;
-        line-height: 30px;
+        @include status-tag;
     }
 }

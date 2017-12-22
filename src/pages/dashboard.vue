@@ -7,7 +7,7 @@
         <div class="large-2 cell">
             <new-work></new-work>
         </div>
-        <div class="large-9 cell">
+        <div class="large-9 cell dashboard-list">
             <list></list>
         </div>
     </div>
