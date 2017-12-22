@@ -1,12 +1,12 @@
 .dashboard {
-    background-color: #fbfbfc;
     position: relative;
+    background-color: $background-grey;
 }
 
 .dashboard-content {
     background-color: $white;
     padding-top: 25px;
-    box-shadow: 0 0 3px #e5e5eb;
+    box-shadow: $box-shadow;
     height: 100%;
 }
 

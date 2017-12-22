@@ -1,7 +1,9 @@
 $color-primary: #5293bc;
 $turquoise:   #4abec1;
 $blur-black: rgba(2,2,3,0.57);
-$background-grey: #fbfbfc;
+
+$list-shadow: 0 0 3px hsla(240, 14%, 91%, 1);
+$box-shadow: 0 0 3px #e5e5eb;
 
 $black:       #424242;
 $white:       #fff;
@@ -11,5 +13,8 @@ $green:       green;
 
 $light-gray:  #ececec;
 $gray:        #efeded;
+$background-grey: #fbfbfc;
 $medium-gray: #bebebe;
 $dark-gray:   #82868d;
+
+$color-supply-sewer: #b1c92d;
