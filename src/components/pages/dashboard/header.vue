@@ -50,8 +50,8 @@
 
 <script>
     export default {
-        data(){
-            return{
+        data () {
+            return {
                 newEnquiriesLabel: 'Nye henvendelser',
                 newEnquiriesCounter: '5',
                 newTasksLabel: 'Nye opgaver',
@@ -61,7 +61,7 @@
                 tasksApproveReadyLabel: 'klar til godkendelse',
                 tasksApproveReadyCounter: '2',
                 tasksDeniedLabel: 'opgaver afvist',
-                tasksDeniedCounter: '2',
+                tasksDeniedCounter: '2'
             }
         }
     }

@@ -7,7 +7,7 @@ import App from './App'
 import router from './router'
 import 'babel-polyfill'
 import Es6Promise from 'es6-promise'
-import moment from 'moment';
+import moment from 'moment'
 import { store } from './store/store'
 Es6Promise.polyfill()
 
@@ -21,7 +21,7 @@ window['moment'] = moment
 window.MotionUI = require('motion-ui')
 
 Vue.http.interceptors.push((request, next) => {
-  next()
+    next()
 })
 
 // Vue.http.options.credentials = true
@@ -43,13 +43,13 @@ Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  store,
-  router,
-  template: '<App/>',
-  components: { App }
+    el: '#app',
+    store,
+    router,
+    template: '<App/>',
+    components: { App }
 })
 
 window.$(document).foundation()
 
-moment.locale('da');
+moment.locale('da')

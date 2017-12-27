@@ -19,10 +19,10 @@
 </template>
 
 <script>
-    import header from './../components/pages/dashboard/header.vue';
-    import filtering from './../components/pages/dashboard/filtering.vue';
-    import newWork from './../components/pages/dashboard/new-work.vue';
-    import list from './../components/shared/list.vue';
+    import header from './../components/pages/dashboard/header.vue'
+    import filtering from './../components/pages/dashboard/filtering.vue'
+    import newWork from './../components/pages/dashboard/new-work.vue'
+    import list from './../components/shared/list.vue'
 
     export default {
         name: 'dashboard',
@@ -31,6 +31,6 @@
             'dashboard-filtering': filtering,
             'new-work': newWork,
             'list': list
-        }    
+        }
     }
 </script>

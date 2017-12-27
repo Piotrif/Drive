@@ -43,19 +43,20 @@
 <script>
 
 export default {
-    data() {
-        return{
-                contentVisible: false
+    data () {
+        return {
+            contentVisible: false
         }
     },
     methods: {
-        toggleContent: function () {
-            this.contentVisible = !this.contentVisible;
-            if (this.contentVisible)
-                this.$emit('content-visible', this);
+        toggleContent () {
+            this.contentVisible = !this.contentVisible
+            if (this.contentVisible) {
+                this.$emit('content-visible', this)
+            }
         },
-        select(){
-            this.selected = this.contentVisible;
+        select () {
+            this.selected = this.contentVisible
         }
     }
 }
