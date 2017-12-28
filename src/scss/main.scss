@@ -2,7 +2,7 @@
 @import '~foundation-sites/scss/foundation';
 
 // Foundation
-@include foundation-everything(true); 
+@include foundation-everything(true);
 
 // Motion UI
 @import '~motion-ui/dist/motion-ui';
@@ -29,3 +29,4 @@
 @import './pages/login.scss';
 @import './pages/dashboard.scss';
 @import './pages/enquiry.scss';
+@import './pages/requisition.scss';

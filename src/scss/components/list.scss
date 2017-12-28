@@ -3,7 +3,7 @@
 }
 
 .list {
-    background-color: $background-grey;
+    background-color: $background-gray;
     padding: 10px;
     color: black;
     border-left: 6px solid $color-supply-sewer;
@@ -12,10 +12,10 @@
 	box-shadow: $list-shadow;
 
     .item {
-        span{
+        span {
             display: block;
         }
-        span:nth-of-type(2){
+        span:nth-of-type(2) {
             font-size: 0.9rem;
             color: $medium-gray;
         }

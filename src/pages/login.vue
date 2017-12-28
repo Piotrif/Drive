@@ -62,6 +62,9 @@ export default {
     methods: {
         onSubmit () {
             console.log('user', this.user)
+            this.$router.push({
+                name: 'dashboard'
+            })
         }
     }
 }

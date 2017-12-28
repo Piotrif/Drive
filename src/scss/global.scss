@@ -110,6 +110,11 @@ h6 {
   max-width: 89em;
 }
 
+.small-svg {
+  width: 20px;
+  height: 20px;
+}
+
 
 .user-work {
   & .header-subpage {
@@ -280,11 +285,11 @@ h6 {
   flex-direction: row;
 }
 
-.flex-column{
+.flex-column {
   flex-direction: column;
 }
 
-.align-items{
+.align-items {
   align-items: center;
 }
 
