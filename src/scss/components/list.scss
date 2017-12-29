@@ -6,9 +6,8 @@
     background-color: $background-grey;
     padding: 10px;
     color: black;
+    height: 55px;
     border-left: 6px solid $color-supply-sewer;
-    -webkit-box-shadow: $list-shadow;
-	-moz-box-shadow: $list-shadow;
 	box-shadow: $list-shadow;
 
     .item {

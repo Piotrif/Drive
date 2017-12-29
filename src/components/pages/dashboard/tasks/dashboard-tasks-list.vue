@@ -1,7 +1,7 @@
 <template>
 <div>
     <div class="grid-x list-counter">
-        <span>4 henvendelser</span>
+        <span>4 opgaver</span>
     </div>
     
     <a href="#">
@@ -36,7 +36,7 @@
 export default {
     data(){
         return{
-
+            
         }
     }
 }

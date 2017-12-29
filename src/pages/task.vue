@@ -126,7 +126,7 @@
                 <!-- ------------- Dokumenter ------------- -->
                 <section v-show="state == 2">
                     <div>
-                        <h2 class="no-margin">Dokumenter</h2>
+                        <h2>Dokumenter</h2>
                         <p>
                             Upload billeder og dokumenter<br />
                             <em>F.eks. pdf, jpg, Word, Excel</em>
@@ -137,13 +137,28 @@
                 
                 <!-- ------------- Aktiviteter ------------- -->
                 <section v-show="state == 3">
-                    <h2>Aktiviteter</h2>
-                    <accordion></accordion>
+                    <div class="grid-x">
+                        <div class="large-8 cell">
+                            <h2>Aktiviteter</h2>
+                        </div>
+                        <div class="large-1 cell">
+                            <button>Rekvirer</button>
+                        </div>
+                    </div>
+                    <accordion-activities></accordion-activities>
                 </section>
 
                 <!-- ------------- Rekvisitioner ------------- -->
                 <section v-show="state == 4">
-                    <h2 class="no-margin">Opgave</h2>
+                    <div class="grid-x">
+                        <div class="large-8 cell">
+                            <h2>Entreprenøropgaver</h2>
+                        </div>
+                        <div class="large-2 cell">
+                            <button>Godkend alle</button>
+                        </div>
+                    </div>
+                    <accordion-entrepreneur></accordion-entrepreneur>
                 </section>
             </div>
         </main>
@@ -156,12 +171,14 @@
 
 <script>
 import FileUploadHandler from './../mixins/shared/fileupload.js';
-import accordion from './../components/pages/task/accordion';
+import accordionActivities from './../components/pages/task/task-accordion-activities';
+import accordionEntrepreneur from './../components/pages/task/task-accordion-entrepreneur';
 
 export default {
     name: 'task',
     components:{
-        'accordion': accordion
+        'accordion-activities': accordionActivities,
+        'accordion-entrepreneur': accordionEntrepreneur
     },
     mixins: [FileUploadHandler],
     data() {

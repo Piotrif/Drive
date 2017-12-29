@@ -1,7 +1,7 @@
 <template>
-  <div style="padding: 45px 45px 20px 45px;">
+  <div class="dashboard-filter">
       <div class="grid-x align-items">
-          <div class="large-1 cell filter-supply">
+          <div class="large-1 large-offset-2 cell filter-supply">
                   <button></button>
                   <span>Vand</span>
               </div>
@@ -19,10 +19,10 @@
                 </li>
             </ul>
           </div>
-            <div class="large-2 cell filter-additional">
+            <div class="large-1 cell filter-additional">
                 <button>Tilføj filter</button>
             </div>
-            <div class="large-2 cell filter-export">
+            <div class="large-1 cell filter-export">
                 <button>Eksporter</button>
             </div>
       </div>

@@ -34,12 +34,9 @@
         </div>
         <div class="grid-x dashboard-tabs">
             <div class="large-6 cell">
-                <!-- <button @click="showTasks"></button>
-                <button @click="showEnquiry"></button>
-                <button @click="showRoutines"></button> -->
-                <button>Henvendelser</button>
-                <button>Opgaver</button>
-                <button>Rutiner</button>
+                <button @click="changeTab('dashboard-enquiries-list')">Henvendelser</button>
+                <button @click="changeTab('dashboard-tasks-list')">Opgaver</button>
+                <button @click="changeTab('dashboard-routines-list')">Rutiner</button>
             </div>
             <div class="large-5 cell">
                 <input type="text" class="large-2 float-right" id="" placeholder="Søg på adresse...">
@@ -62,6 +59,12 @@
                 tasksApproveReadyCounter: '2',
                 tasksDeniedLabel: 'opgaver afvist',
                 tasksDeniedCounter: '2',
+                selectedtab: 1
+            }
+        },
+        methods:{
+            changeTab(selectedtab){
+                this.$emit('changeTab', selectedtab);
             }
         }
     }

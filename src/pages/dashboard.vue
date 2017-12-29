@@ -1,36 +1,56 @@
 <template>
 <div class="dashboard">
     <div class="dashboard-hero-img blur"></div>
-    <dashboard-header></dashboard-header>
+    <!-- <icon width="100" height="100" :glyph="cross"></icon> -->
+    <!-- <svg>
+        <use xlink:href="#cross"></use>
+    </svg> -->
+    <dashboard-header @changeTab="changedTab"></dashboard-header>
     <dashboard-filtering></dashboard-filtering>
     <div class="grid-x dashboard-content">
         <div class="large-2 cell">
             <new-work></new-work>
         </div>
         <div class="large-9 cell dashboard-list">
-            <list></list>
+            <component :is="selectedTab" ></component>
         </div>
     </div>
-        <!-- <tasks v-if="showTasks" :data="data"></tasks>
-        <enquiry v-if="showEnquiry" :data="data"></enquiry>
-        <routines v-if="showRoutines" :data="data"></routines> -->
 </div>
     
 </template>
 
 <script>
-    import header from './../components/pages/dashboard/header.vue';
-    import filtering from './../components/pages/dashboard/filtering.vue';
-    import newWork from './../components/pages/dashboard/new-work.vue';
-    import list from './../components/shared/list.vue';
+    import icon from './../components/shared/icons/icons.vue';  
+    import cross from './../assets/svg/cross.svg';  
+
+    import header from './../components/pages/dashboard/dashboard-header.vue';
+    import filtering from './../components/pages/dashboard/dashboard-filtering.vue';
+    import newWork from './../components/pages/dashboard/dashboard-new-work.vue';
+    import enquiries from './../components/pages/dashboard/enquiries/dashboard-enquiries-list.vue';
+    import tasks from './../components/pages/dashboard/tasks/dashboard-tasks-list.vue';
+    import routines from './../components/pages/dashboard/routines/dashboard-routines-list.vue';
 
     export default {
         name: 'dashboard',
+        data(){
+            return{
+                selectedTab: 'dashboard-enquiries-list',
+                cross
+            }
+        },
         components: {
             'dashboard-header': header,
             'dashboard-filtering': filtering,
             'new-work': newWork,
-            'list': list
-        }    
+            'dashboard-enquiries-list': enquiries,
+            'dashboard-tasks-list': tasks,
+            'dashboard-routines-list': routines,
+            'icon': icon
+        },
+        methods: {
+          changedTab(result){
+              this.selectedTab = result;
+          }
+        }
     }
 </script>
