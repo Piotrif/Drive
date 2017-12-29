@@ -12,6 +12,9 @@ export default {
     name: 'app',
     components: {
         topbar
+    },
+    mounted () {
+        window.$(document).foundation()
     }
 }
 </script>

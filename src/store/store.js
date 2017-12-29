@@ -9,17 +9,17 @@ export const store = new Vuex.Store({
     },
     getters: {
         value: state => {
-            return state.value;
+            return state.value
         }
     },
     mutations: {
         updateValue: (state, payload) => {
-            state.value = payload;
+            state.value = payload
         }
     },
     actions: {
         updateValue: ({ commit }, payload) => {
-            commit('updateValue', payload);
+            commit('updateValue', payload)
         }
     }
-});
+})

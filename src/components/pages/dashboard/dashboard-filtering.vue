@@ -31,9 +31,9 @@
 
 <script>
     export default {
-        data(){
-            return{
-                fefe: 'fefe',
+        data () {
+            return {
+                fefe: 'fefe'
             }
         }
     }

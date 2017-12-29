@@ -39,6 +39,23 @@
   }
 }
 
+.button-customized {
+  text-transform: uppercase;
+  border: 1px solid $white;
+  padding: 20px 30px;
+  color: $white;
+  background-color: transparent;
+  margin: auto;
+  display: block;
+  -webkit-transition: background-color .3s ease, color .3s ease;
+  transition: background-color .3s ease, color .3s ease;
+
+  &:hover, &:active, &:focus {
+    background-color: $white;
+    color: $black;
+  }
+}
+
 .button-filter-round {
   display: inline-block;
   width: 40px;

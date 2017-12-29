@@ -269,12 +269,12 @@
 </template>
 
 <script>
-import FileUploadHandler from './../mixins/shared/fileupload.js';
+import FileUploadHandler from './../mixins/shared/fileupload.js'
 
 export default {
     name: 'enquiry',
     mixins: [FileUploadHandler],
-    data() {
+    data () {
         return {
             user: 'Niras admin',
             existingEnquiry: false,
@@ -303,42 +303,44 @@ export default {
         }
     },
     methods: {
-        changeState(state) {
-            this.state = state;
+        changeState (state) {
+            this.state = state
         },
-        selectSupply(supply) {
-            this.selectedSupply = supply;
+        selectSupply (supply) {
+            this.selectedSupply = supply
         },
-        save() {
-            console.log("save clicked");
+        save () {
+            console.log('save clicked')
         },
-        exit() {
-            console.log("exit clicked");
+        exit () {
+            console.log('exit clicked')
         }
     },
-    created() {
-        this.contacttypes = [
-            {id: 1, name: 'Anden forsyning'},
-            {id: 2, name: 'Andet'},
-            {id: 3, name: 'Borger'},
-            {id: 4, name: 'Brand'},
-            {id: 5, name: 'Brand og redning'},
-            {id: 6, name: 'Driftspersonale'},
-        ],
+    created () {
+        // this.contacttypes = [
+        //     {id: 1, name: 'Anden forsyning'},
+        //     {id: 2, name: 'Andet'},
+        //     {id: 3, name: 'Borger'},
+        //     {id: 4, name: 'Brand'},
+        //     {id: 5, name: 'Brand og redning'},
+        //     {id: 6, name: 'Driftspersonale'}
+        // ],
         this.propertytypes = [
             {id: 1, name: 'Andet'},
             {id: 2, name: 'Beboelse'},
             {id: 3, name: 'Butik'},
             {id: 4, name: 'Butik - lednedsmiddel'},
             {id: 5, name: 'Byggeplads'}
-        ],
+        ]
+
         this.problemtypes = [
             {id: 1, name: 'Adgangsforhold (anlægsarbejde m.v.)'},
             {id: 2, name: 'Andet'},
             {id: 3, name: 'Defekt dæksel'},
             {id: 4, name: 'Fejlmelding/alarm'},
             {id: 5, name: 'Fluer'}
-        ],
+        ]
+
         this.weathertypes = [
             {id: 1, name: 'Andet'},
             {id: 2, name: 'Ikke relevant'},

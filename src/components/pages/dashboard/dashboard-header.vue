@@ -47,8 +47,8 @@
 
 <script>
     export default {
-        data(){
-            return{
+        data () {
+            return {
                 newEnquiriesLabel: 'Nye henvendelser',
                 newEnquiriesCounter: '5',
                 newTasksLabel: 'Nye opgaver',

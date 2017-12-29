@@ -51,7 +51,7 @@
 <script>
 export default {
     name: 'login',
-    data() {
+    data () {
         return {
             user: {
                 username: '',
@@ -60,8 +60,11 @@ export default {
         }
     },
     methods: {
-        onSubmit() {
-            console.log("user", this.user);
+        onSubmit () {
+            console.log('user', this.user)
+            this.$router.push({
+                name: 'dashboard'
+            })
         }
     }
 }
