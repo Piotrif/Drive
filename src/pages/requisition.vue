@@ -180,8 +180,6 @@ export default {
             this.state = state
         },
         activityList (object, activities) {
-            console.log('object', object)
-            console.log('activity', activities)
             return activities.filter(activity => {
                 return activity.activityObjectId === object.id
             })
