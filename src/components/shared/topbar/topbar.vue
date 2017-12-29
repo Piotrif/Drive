@@ -26,36 +26,36 @@
         <div class="dropdown-pane" id="user-dropdown" data-dropdown data-auto-focus="true" data-alignment="bottom" data-position="bottom">
             <ul>
                 <li>
-                    <a>
+                    <router-link :to="{name: 'settings'}" data-toggle="user-dropdown">
                         <div class="image-container">
                             <img src="./../../../assets/svg/user.svg" alt="user svg" class="small-svg">
                         </div>
                         {{user}}
-                    </a>
+                    </router-link>
                 </li>
                 <li>
-                    <a>
+                    <router-link :to="{name: 'settings'}" data-toggle="user-dropdown">
                         <div class="image-container">
                             <img src="./../../../assets/svg/group.svg" alt="group svg" class="small-svg">
                         </div>
                         {{workStation}}
-                    </a>
+                    </router-link>
                 </li>
                 <li>
-                    <a>
+                    <router-link :to="{name: 'settings'}" data-toggle="user-dropdown">
                         <div class="image-container">
                             <img src="./../../../assets/svg/building.svg" alt="building svg" class="small-svg">
                         </div>
                         Firmaer
-                    </a>
+                    </router-link>
                 </li>
                 <li>
-                    <a>
+                    <router-link :to="{name: 'login'}" data-toggle="user-dropdown">
                         <div class="image-container">
                             <img src="./../../../assets/svg/log-out.svg" alt="log out svg" class="small-svg">
                         </div>
                         Log ud
-                    </a>
+                    </router-link>
                 </li>
             </ul>
         </div>

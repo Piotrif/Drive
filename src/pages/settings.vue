@@ -1,6 +1,8 @@
 <template>
-    <div class="settings">
-        <h1>Indstillinger</h1>
+    <div class="settings content">
+        <main>
+            <h1>Indstillinger</h1>
+        </main>
     </div>
 </template>
 
