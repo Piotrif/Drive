@@ -57,21 +57,22 @@
 <script>
 
 export default {
-    data() {
-        return{
-                contentVisible: false,
-                accordionSelected: false
+    data () {
+        return {
+            contentVisible: false,
+            accordionSelected: false
         }
     },
     methods: {
-        toggleContent: function () {
-            this.contentVisible = !this.contentVisible;
+        toggleContent () {
+            this.contentVisible = !this.contentVisible
 
-            if (this.contentVisible)
-                this.$emit('content-visible', this);
+            if (this.contentVisible) {
+                this.$emit('content-visible', this)
+            }
         },
-        select(){
-            this.accordionSelected = !this.accordionSelected;
+        select () {
+            this.accordionSelected = !this.accordionSelected
         }
     }
 }

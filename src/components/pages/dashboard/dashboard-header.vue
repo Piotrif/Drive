@@ -62,9 +62,9 @@
                 selectedtab: 1
             }
         },
-        methods:{
-            changeTab(selectedtab){
-                this.$emit('changeTab', selectedtab);
+        methods: {
+            changeTab (selectedtab) {
+                this.$emit('changeTab', selectedtab)
             }
         }
     }

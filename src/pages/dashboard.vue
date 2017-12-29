@@ -1,10 +1,6 @@
 <template>
 <div class="dashboard">
     <div class="dashboard-hero-img blur"></div>
-    <!-- <icon width="100" height="100" :glyph="cross"></icon> -->
-    <!-- <svg>
-        <use xlink:href="#cross"></use>
-    </svg> -->
     <dashboard-header @changeTab="changedTab"></dashboard-header>
     <dashboard-filtering></dashboard-filtering>
     <div class="grid-x dashboard-content">
@@ -20,22 +16,18 @@
 </template>
 
 <script>
-    import icon from './../components/shared/icons/icons.vue';  
-    import cross from './../assets/svg/cross.svg';  
-
-    import header from './../components/pages/dashboard/dashboard-header.vue';
-    import filtering from './../components/pages/dashboard/dashboard-filtering.vue';
-    import newWork from './../components/pages/dashboard/dashboard-new-work.vue';
-    import enquiries from './../components/pages/dashboard/enquiries/dashboard-enquiries-list.vue';
-    import tasks from './../components/pages/dashboard/tasks/dashboard-tasks-list.vue';
-    import routines from './../components/pages/dashboard/routines/dashboard-routines-list.vue';
+    import header from './../components/pages/dashboard/dashboard-header.vue'
+    import filtering from './../components/pages/dashboard/dashboard-filtering.vue'
+    import newWork from './../components/pages/dashboard/dashboard-new-work.vue'
+    import enquiries from './../components/pages/dashboard/enquiries/dashboard-enquiries-list.vue'
+    import tasks from './../components/pages/dashboard/tasks/dashboard-tasks-list.vue'
+    import routines from './../components/pages/dashboard/routines/dashboard-routines-list.vue'
 
     export default {
         name: 'dashboard',
-        data(){
-            return{
-                selectedTab: 'dashboard-enquiries-list',
-                cross
+        data () {
+            return {
+                selectedTab: 'dashboard-enquiries-list'
             }
         },
         components: {
@@ -44,13 +36,12 @@
             'new-work': newWork,
             'dashboard-enquiries-list': enquiries,
             'dashboard-tasks-list': tasks,
-            'dashboard-routines-list': routines,
-            'icon': icon
+            'dashboard-routines-list': routines
         },
         methods: {
-          changedTab(result){
-              this.selectedTab = result;
-          }
+            changedTab (result) {
+                this.selectedTab = result
+            }
         }
     }
 </script>

@@ -170,13 +170,13 @@
 </template>
 
 <script>
-import FileUploadHandler from './../mixins/shared/fileupload.js';
-import accordionActivities from './../components/pages/task/task-accordion-activities';
-import accordionEntrepreneur from './../components/pages/task/task-accordion-entrepreneur';
+import FileUploadHandler from './../mixins/shared/fileupload.js'
+import accordionActivities from './../components/pages/task/task-accordion-activities'
+import accordionEntrepreneur from './../components/pages/task/task-accordion-entrepreneur'
 
 export default {
     name: 'task',
-    components:{
+    components: {
         'accordion-activities': accordionActivities,
         'accordion-entrepreneur': accordionEntrepreneur
     },
