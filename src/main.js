@@ -9,6 +9,7 @@ import 'babel-polyfill'
 import Es6Promise from 'es6-promise'
 import moment from 'moment'
 import { store } from './store/store'
+import Icon from './icon.vue'
 Es6Promise.polyfill()
 
 require('foundation-sites')
@@ -19,6 +20,8 @@ window.jQuery = jQuery
 window.$ = jQuery
 window['moment'] = moment
 window.MotionUI = require('motion-ui')
+
+Vue.component('icon', Icon)
 
 Vue.http.interceptors.push((request, next) => {
     next()
