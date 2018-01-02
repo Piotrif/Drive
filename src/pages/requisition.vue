@@ -1,10 +1,10 @@
 <template>
-    <div class="requisition user-work">
+    <div class="form-view user-work">
         <header class="header-subpage">
             <div class="content-left">
                 <div class="grid-x">
                     <div class="large-2 medium-2 small-12 cell flexbox-center">
-                        <img src="./../assets/svg/arrow-left-circle.svg" alt="arrow left" class="arrow-left-circle-svg">
+                        <icon class="arrow-left-circle-svg small-svg fill-white stroke-white" name="arrow-left-circle"></icon>
                     </div>
                     <div class="large-5 medium-7 small-12 cell">
                         <div class="grid-x">
@@ -22,7 +22,9 @@
                         <div class="grid-x">
                             <div class="large-12 medium-12 small-12 cell">
                                 <div v-if="!saved">Du accepterede opgaven {{timeStamp}}</div>
-                                <div v-if="saved"><img src="./../assets/svg/checkmark.svg" alt="checkmark" class="checkmark-svg"><span>Gemt kl. {{savedTimeStamp}}</span></div>
+                                <div v-if="saved">
+                                    <icon class="checkmark-svg small-svg" name="checkmark"></icon>
+                                    <span>Gemt kl. {{savedTimeStamp}}</span></div>
                             </div>
                         </div>
                     </div>
@@ -41,22 +43,22 @@
                 <ul>
                     <li :class="{'active': state == 1}">
                         <a @click="changeState(1)">
-                            <img src="./../assets/svg/wrench.svg" alt="wrench svg" class="wrench-svg">
+                            <icon class="wrench small-svg" name="wrench"></icon>
                         </a>
                     </li>
                     <li :class="{'active': state == 2}">
                         <a @click="changeState(2)">
-                            <img src="./../assets/svg/wrench.svg" alt="wrench svg" class="wrench-svg">
+                            <icon class="wrench small-svg" name="wrench"></icon>
                         </a>
                     </li>
                     <li :class="{'active': state == 3}">
                         <a @click="changeState(3)">
-                            <img src="./../assets/svg/wrench.svg" alt="wrench svg" class="wrench-svg">
+                            <icon class="wrench small-svg" name="wrench"></icon>
                         </a>
                     </li>
                     <li :class="{'active': state == 4}">
                         <a @click="changeState(4)">
-                            <img src="./../assets/svg/wrench.svg" alt="wrench svg" class="wrench-svg">
+                            <icon class="wrench small-svg" name="wrench"></icon>
                         </a>
                     </li>
                 </ul>
@@ -112,13 +114,13 @@
                                 <p class="contact-header">Sagsbehandler {{contact.caseworker}}</p>
                                 <div v-if="contact.phone != null" class="contact-group">
                                     <div class="contact-background">
-                                        <img src="./../assets/svg/enquiry.svg" alt="enquiry svg" class="medium-svg float-left">
+                                        <icon class="enquiry medium-svg fill-white" name="enquiry"></icon>
                                     </div>
                                     <span>{{contact.phone}}</span>
                                 </div>
                                 <div v-if="contact.email != null" class="contact-group">
                                     <div class="contact-background">
-                                        <img src="./../assets/svg/envelope.svg" alt="envelope svg" class="medium-svg float-left">
+                                        <icon class="envelope medium-svg fill-white" name="envelope"></icon>
                                     </div>
                                     <span>{{contact.email}}</span>
                                 </div>
@@ -130,7 +132,7 @@
                                 <p class="contact-header">Anmelder {{contact.reporter}}</p>
                                 <div v-if="contact.address != null" class="contact-group">
                                     <div class="contact-background">
-                                        <img src="./../assets/svg/location.svg" alt="location svg" class="medium-svg float-left">
+                                        <icon class="location medium-svg fill-white" name="location"></icon>
                                     </div>
                                     <span>{{contact.address}}</span>
                                 </div>

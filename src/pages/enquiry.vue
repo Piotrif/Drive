@@ -1,5 +1,5 @@
 <template>
-    <div class="enquiry">
+    <div class="enquiry form-view">
         <header class="header-subpage">
             <div class="content-left">
                 <div class="grid-x">
@@ -14,14 +14,14 @@
                 <div class="grid-x">
                     <div class="large-2 medium-2 small-12 cell">
                         <div class="flexbox-center full-height">
-                            <img src="./../assets/svg/arrow-left-circle.svg" alt="arrow left" class="arrow-left-circle-svg">
+                            <icon class="arrow-left-circle-svg small-svg fill-white stroke-white" name="arrow-left-circle"></icon>
                         </div>
                     </div>
                     <div class="large-7 medium-7 small-12 cell">
                         <h1>Ny henvendelse</h1>
                         <div class="grid-x">
                             <div class="large-12 medium-12 small-12 cell">
-                                <img src="./../assets/svg/user.svg" alt="user" class="user-svg"> <span>{{user}}</span>
+                                <icon class="user small-svg fill-white" name="user"></icon> <span>{{user}}</span>
                             </div>
                         </div>
                     </div>
@@ -43,22 +43,22 @@
                 <ul>
                     <li :class="{'active': state == 1}">
                         <a @click="changeState(1)">
-                            <img src="./../assets/svg/wrench.svg" alt="wrench svg" class="wrench-svg">
+                            <icon class="wrench small-svg" name="wrench"></icon>
                         </a>
                     </li>
                     <li :class="{'active': state == 2}">
                         <a @click="changeState(2)">
-                            <img src="./../assets/svg/wrench.svg" alt="wrench svg" class="wrench-svg">
+                            <icon class="wrench small-svg" name="wrench"></icon>
                         </a>
                     </li>
                     <li :class="{'active': state == 3}">
                         <a @click="changeState(3)">
-                            <img src="./../assets/svg/wrench.svg" alt="wrench svg" class="wrench-svg">
+                            <icon class="wrench small-svg" name="wrench"></icon>
                         </a>
                     </li>
                     <li :class="{'active': state == 4}">
                         <a @click="changeState(4)">
-                            <img src="./../assets/svg/wrench.svg" alt="wrench svg" class="wrench-svg">
+                            <icon class="wrench small-svg" name="wrench"></icon>
                         </a>
                     </li>
                 </ul>
@@ -71,7 +71,7 @@
                     <div class="form">
                         <div class="grid-x">
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                <img src="./../assets/svg/file-text.svg" alt="file text svg" class="file-text-svg">
+                                <icon class="file-text-svg small-svg" name="file-text"></icon>
                             </div>
                             <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Kontakttype<span class="required">*</span></p>
@@ -90,7 +90,7 @@
                     <div class="form">
                         <div class="grid-x">
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                <img src="./../assets/svg/user.svg" alt="user svg" class="user-svg">
+                                <icon class="user small-svg" name="user"></icon>
                             </div>
                             <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Navn</p>
@@ -104,7 +104,7 @@
                     <div class="form">
                         <div class="grid-x">
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                <img src="./../assets/svg/user.svg" alt="user svg" class="user-svg">
+                                <icon class="user small-svg" name="user"></icon>
                             </div>
                             <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Telefon</p>
@@ -118,7 +118,7 @@
                     <div class="form">
                         <div class="grid-x">
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                <img src="./../assets/svg/mail-checked.svg" alt="email svg" class="mail-checked-svg">
+                                <icon class="mail-checked-svg small-svg" name="mail-checked"></icon>
                             </div>
                             <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>E-mail</p>
@@ -136,14 +136,18 @@
                     <div class="form">
                         <div class="grid-x">
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                <img src="./../assets/svg/mail-checked.svg" alt="email svg" class="mail-checked-svg">
+                                <icon class="mail-checked-svg small-svg" name="mail-checked"></icon>
                             </div>
                             <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Forsyningsart</p>
                             </div>
                             <div class="auto cell border-bottom select-supply">
-                                <div class="button-filter-round water" @click="selectSupply('water')" :class="{'selected-supply-water': selectedSupply == 'water'}"></div><span>Vand</span>
-                                <div class="button-filter-round sewer" @click="selectSupply('sewer')" :class="{'selected-supply-sewer': selectedSupply == 'sewer'}"></div><span>Kloak</span>
+                                <div class="button-filter-round water" @click="selectSupply('water')" :class="{'selected-supply-water': selectedSupply == 'water'}">
+                                    <icon class="water small-svg" name="user"></icon>
+                                </div><span>Vand</span>
+                                <div class="button-filter-round sewer" @click="selectSupply('sewer')" :class="{'selected-supply-sewer': selectedSupply == 'sewer'}">
+                                    <icon class="sewer small-svg" name="cancel"></icon>
+                                </div><span>Kloak</span>
                             </div>
                         </div>
                     </div>
@@ -151,7 +155,7 @@
                     <div class="form">
                         <div class="grid-x">
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                <img src="./../assets/svg/mail-checked.svg" alt="email svg" class="mail-checked-svg">
+                                <icon class="mail-checked-svg small-svg" name="mail-checked"></icon>
                             </div>
                             <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Dato for problem</p>
@@ -165,7 +169,7 @@
                     <div class="form">
                         <div class="grid-x">
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                <img src="./../assets/svg/mail-checked.svg" alt="email svg" class="mail-checked-svg">
+                                <icon class="mail-checked-svg small-svg" name="mail-checked"></icon>
                             </div>
                             <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Adresse for problem</p>
@@ -179,7 +183,7 @@
                     <div class="form">
                         <div class="grid-x">
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                <img src="./../assets/svg/file-text.svg" alt="file text svg" class="file-text-svg">
+                                <icon class="file-text-svg small-svg" name="file-text"></icon>
                             </div>
                             <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Ejendomstype</p>
@@ -198,7 +202,7 @@
                     <div class="form">
                         <div class="grid-x">
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                <img src="./../assets/svg/file-text.svg" alt="file text svg" class="file-text-svg">
+                                <icon class="file-text-svg small-svg" name="file-text"></icon>
                             </div>
                             <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Problemtype<span class="required">*</span></p>
@@ -217,7 +221,7 @@
                     <div class="form">
                         <div class="grid-x">
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                <img src="./../assets/svg/file-text.svg" alt="file text svg" class="file-text-svg">
+                                <icon class="file-text-svg small-svg" name="file-text"></icon>
                             </div>
                             <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Vejrtype</p>
@@ -236,7 +240,7 @@
                     <div class="form">
                         <div class="grid-x">
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                <img src="./../assets/svg/file-text.svg" alt="file text svg" class="file-text-svg">
+                                <icon class="file-text-svg small-svg" name="file-text"></icon>
                             </div>
                             <div class="large-3 medium-3 small-3 cell border-bottom bigger-padding">
                                 <p>Beskrivelse</p>

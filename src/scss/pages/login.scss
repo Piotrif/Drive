@@ -22,7 +22,7 @@
                 & svg {
                     position: absolute;
                     left: 15px;
-                    top: 12px;
+                    top: 15px;
                     bottom: 0;
                     fill: $dark-gray;
                 }
@@ -44,6 +44,8 @@
                 vertical-align: 17px;
                 display: inline-block;
                 margin-right: 10px;
+                width: 80px;
+                height: 40px;
             }
         }
     }

@@ -41,7 +41,7 @@ ul {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Barlow', 'Roboto', Helvetica, Arial, sans-serif !important;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif !important;
   font-weight: 500;
 }
 
@@ -93,10 +93,6 @@ h6 {
   overflow-y: auto;
 }
 
-.niraslogo {
-  width: 80px;
-}
-
 .content {
   width: 100%;
   margin-left: auto;
@@ -115,13 +111,7 @@ h6 {
   max-width: 89em;
 }
 
-.small-svg {
-  width: 20px;
-  height: 20px;
-}
-
-
-.user-work {
+.form-view {
   & .header-subpage {
       padding: 20px 0px;
       background-color: $blue;
@@ -130,6 +120,7 @@ h6 {
 
       & .arrow-left-circle-svg {
           width: 40px;
+          height: 40px;
           fill: $dark-gray;
       }
       
@@ -225,27 +216,21 @@ h6 {
               & .selected-supply-water {
                   border: 2px solid $blue;
               }
-
-              & .water:after {
-                  content: '';
-                  background-image: url('./assets/svg/user.svg');
-                  background-size: 17px;
-                  display: inline-block;
-                  width: 17px;
-                  height: 17px;
-              }
-
-              & .sewer:after {
-                  content: '';
-                  background-image: url('./assets/svg/cancel.svg');
-                  background-size: 17px;
-                  display: inline-block;
-                  width: 17px;
-                  height: 17px;
+          
+              & .water svg, & .sewer svg {
+                  width: 100%;
+                  height: 100%;
+                  position: absolute;
+                  top: 0;
+                  bottom: 0;
+                  left: 0;
+                  right: 0;
+                  padding: 10px;
               }
 
               & .select-supply span {
                   margin-right: 20px;
+                  vertical-align: 16px;
               }
 
               & .bigger-padding p {
@@ -269,6 +254,32 @@ h6 {
 }
 
 
+
+/**********************************/
+/*              SVG               */
+/**********************************/
+
+.small-svg {
+  width: 20px;
+  height: 20px;
+}
+
+.medium-svg {
+  width: 40px;
+  height: 40px;
+}
+
+.fill-white {
+  fill: $white !important;
+}
+
+.fill-dark-gray {
+  fill: $dark-gray !important;
+}
+
+.stroke-white {
+  stroke: $white;
+}
 
 
 

@@ -1,10 +1,10 @@
 <template>
-    <div class="user-work">
+    <div class="user-work form-view">
         <header class="header-subpage">
             <div class="content-left">
                 <div class="grid-x">
                     <div class="large-2 medium-2 small-12 cell flexbox-center">
-                        <img src="./../assets/svg/arrow-left-circle.svg" alt="arrow left" class="arrow-left-circle-svg">
+                        <icon class="arrow-left-circle-svg small-svg fill-white stroke-white" name="arrow-left-circle"></icon>
                     </div>
                     <div class="large-5 medium-7 small-12 cell">
                         <div class="grid-x">
@@ -21,7 +21,7 @@
                         </div>
                         <div class="grid-x">
                             <div class="large-12 medium-12 small-12 cell">
-                                <img src="./../assets/svg/user.svg" alt="user" class="user-svg"><span>{{user}}</span>
+                                <icon class="user small-svg fill-white" name="user"></icon> <span>{{user}}</span>
                             </div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                     <div class="form">
                         <div class="grid-x">
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                <img src="./../assets/svg/file-text.svg" alt="file text svg" class="file-text-svg">
+                                <icon class="file-text small-svg" name="file-text"></icon>
                             </div>
                             <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Skabelon<span class="required"></span></p>
@@ -73,14 +73,18 @@
                     <div class="form">
                         <div class="grid-x">
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                <img src="./../assets/svg/user.svg" alt="user svg" class="user-svg">
+                                <icon class="user small-svg" name="user"></icon>
                             </div>
                             <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Forsyningsart</p>
                             </div>
-                            <div class="auto cell border-bottom">
-                                <div class="button-filter-round water" @click="selectSupply('water')" :class="{'selected-supply-water': selectedSupply == 'water'}"></div><span>Vand</span>
-                                <div class="button-filter-round sewer" @click="selectSupply('sewer')" :class="{'selected-supply-sewer': selectedSupply == 'sewer'}"></div><span>Kloak</span>
+                            <div class="auto cell border-bottom select-supply">
+                                <div class="button-filter-round water" @click="selectSupply('water')" :class="{'selected-supply-water': selectedSupply == 'water'}">
+                                    <icon class="sewer small-svg" name="user"></icon>    
+                                </div><span>Vand</span>
+                                <div class="button-filter-round sewer" @click="selectSupply('sewer')" :class="{'selected-supply-sewer': selectedSupply == 'sewer'}">
+                                    <icon class="sewer small-svg" name="cancel"></icon>
+                                </div><span>Kloak</span>
                             </div>
                         </div>
                     </div>
@@ -88,7 +92,7 @@
                     <div class="form">
                         <div class="grid-x">
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                <img src="./../assets/svg/user.svg" alt="user svg" class="user-svg">
+                                <icon class="user small-svg" name="user"></icon>
                             </div>
                             <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Adresse</p>

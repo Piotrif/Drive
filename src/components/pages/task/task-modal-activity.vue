@@ -3,7 +3,7 @@
         <div class="form">
             <div class="grid-x">
                 <div class="large-1 medium-1 small-1 cell flexbox-center">
-                    <img src="./../assets/svg/user.svg" alt="user svg" class="user-svg">
+                    <icon class="user small-icon" name="user"></icon>
                 </div>
                 <div class="large-3 medium-3 small-3 cell border-bottom">
                     <p>Aktivitet</p>
@@ -16,7 +16,7 @@
         <div class="form">
             <div class="grid-x">
                 <div class="large-1 medium-1 small-1 cell flexbox-center">
-                    <img src="./../assets/svg/user.svg" alt="user svg" class="user-svg">
+                    <icon class="user small-icon" name="user"></icon>
                 </div>
                 <div class="large-3 medium-3 small-3 cell border-bottom">
                     <p>Periode</p>
@@ -32,7 +32,7 @@
         <div class="form">
             <div class="grid-x">
                 <div class="large-1 medium-1 small-1 cell flexbox-center">
-                    <img src="./../assets/svg/user.svg" alt="user svg" class="user-svg">
+                    <icon class="user small-icon" name="user"></icon>
                 </div>
                 <div class="large-3 medium-3 small-3 cell border-bottom">
                     <p>Entreprenør</p>
@@ -48,7 +48,7 @@
         <div class="form">
             <div class="grid-x">
                 <div class="large-1 medium-1 small-1 cell flexbox-center">
-                    <img src="./../assets/svg/user.svg" alt="user svg" class="user-svg">
+                    <icon class="user small-icon" name="user"></icon>
                 </div>
                 <div class="large-3 medium-3 small-3 cell border-bottom">
                     <p>Reference</p>
@@ -63,7 +63,7 @@
         <div class="form">
             <div class="grid-x">
                 <div class="large-1 medium-1 small-1 cell flexbox-center">
-                    <img src="./../assets/svg/user.svg" alt="user svg" class="user-svg">
+                    <icon class="user small-icon" name="user"></icon>
                 </div>
                 <div class="large-3 medium-3 small-3 cell border-bottom">
                     <p>Bemærkning</p>
