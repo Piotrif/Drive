@@ -39,34 +39,11 @@
             </div>
         </header>
         <main>
-            <nav class="sidemenu flexbox-center">
-                <ul>
-                    <li :class="{'active': state == 1}">
-                        <a @click="changeState(1)">
-                            <img src="./../assets/svg/wrench.svg" alt="wrench svg" class="wrench-svg">
-                        </a>
-                    </li>
-                    <li :class="{'active': state == 2}">
-                        <a @click="changeState(2)">
-                            <img src="./../assets/svg/wrench.svg" alt="wrench svg" class="wrench-svg">
-                        </a>
-                    </li>
-                    <li :class="{'active': state == 3}">
-                        <a @click="changeState(3)">
-                            <img src="./../assets/svg/wrench.svg" alt="wrench svg" class="wrench-svg">
-                        </a>
-                    </li>
-                    <li :class="{'active': state == 4}">
-                        <a @click="changeState(4)">
-                            <img src="./../assets/svg/wrench.svg" alt="wrench svg" class="wrench-svg">
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <guide-nav :task="true" @changeStep="changedStep" :initStep="step" :icons="iconObj"></guide-nav>
             <div class="overflow content-left">
                 
-                <!-- ------------- Oplysninger ------------- -->
-                <section v-show="state == 1">
+                <!-- ------------- Generel informations ------------- -->
+                <section v-show="step == 1">
                     <div class="grid-x">
                         <div class="large-10 cell">
                             <h2>Oplysninger</h2>
@@ -123,8 +100,8 @@
                     </div>
                 </section>
                 
-                <!-- ------------- Dokumenter ------------- -->
-                <section v-show="state == 2">
+                <!-- ------------- Documents ------------- -->
+                <section v-show="step == 2">
                     <div>
                         <h2>Dokumenter</h2>
                         <p>
@@ -136,7 +113,7 @@
                 </section>
                 
                 <!-- ------------- Aktiviteter ------------- -->
-                <section v-show="state == 3">
+                <section v-show="step == 3">
                     <div class="grid-x">
                         <div class="large-8 cell">
                             <h2>Aktiviteter</h2>
@@ -148,8 +125,8 @@
                     <accordion-activities></accordion-activities>
                 </section>
 
-                <!-- ------------- Rekvisitioner ------------- -->
-                <section v-show="state == 4">
+                <!-- ------------- Requisitions ------------- -->
+                <section v-show="step == 4">
                     <div class="grid-x">
                         <div class="large-8 cell">
                             <h2>Entreprenøropgaver</h2>
@@ -170,6 +147,7 @@
 </template>
 
 <script>
+import guideNav from './../components/shared/nav/guide-nav.vue'
 import FileUploadHandler from './../mixins/shared/fileupload.js'
 import accordionActivities from './../components/pages/task/task-accordion-activities'
 import accordionEntrepreneur from './../components/pages/task/task-accordion-entrepreneur'
@@ -177,6 +155,7 @@ import accordionEntrepreneur from './../components/pages/task/task-accordion-ent
 export default {
     name: 'task',
     components: {
+        'guide-nav': guideNav,
         'accordion-activities': accordionActivities,
         'accordion-entrepreneur': accordionEntrepreneur
     },
@@ -185,7 +164,7 @@ export default {
         return {
             user: 'Niras admin',
             existingEnquiry: false,
-            state: 1,
+            step: 1,
             selected: null,
             contacttypes: [],
             propertytypes: [],
@@ -206,12 +185,13 @@ export default {
                 problemtype: '',
                 weathertype: '',
                 description: ''
-            }
+            },
+            iconObj: {}
         }
     },
     methods: {
-        changeState (state) {
-            this.state = state
+        changedStep (result) {
+            this.step = result
         },
         selectSupply (supply) {
             this.selectedSupply = supply

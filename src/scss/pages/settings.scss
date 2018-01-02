@@ -1,0 +1,38 @@
+.settings{
+    main{
+        padding-top: 0 !important;
+    }
+}
+
+.side-left-menu{
+    li{
+        height: 100px;
+    }
+
+    border-right: 1px solid $gray;
+}
+
+.settings-top-nav{
+    margin-bottom: 70px;
+
+    li{
+        display: inline;
+    }
+    
+    a{
+        padding: 10px;
+    }
+}
+
+.settings-profile,
+.settings-organisation {
+    margin-top: 50px;
+}
+
+.change-profile-pic{
+    border: 1px solid $color-primary;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 70px;
+}

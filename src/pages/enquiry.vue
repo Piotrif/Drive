@@ -64,6 +64,7 @@
                 </ul>
             </nav>
             <div class="overflow content-left">
+                
                 <!-- ------------- STATE 1 ------------- -->
                 <section v-show="state == 1">
                     <h2>Anmelder</h2>

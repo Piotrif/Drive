@@ -1,16 +1,18 @@
 <template>
 <div class="dashboard">
     <div class="dashboard-hero-img blur"></div>
-    <dashboard-header @changeTab="changedTab"></dashboard-header>
+    <dashboard-header @changeWorkView="changedView"></dashboard-header>
     <dashboard-filtering></dashboard-filtering>
-    <div class="grid-x dashboard-content">
-        <div class="large-2 cell">
-            <new-work></new-work>
+    <main>
+        <div class="grid-x dashboard-content">
+            <div class="large-2 cell">
+                <new-work></new-work>
+            </div>
+            <div class="large-9 cell dashboard-list">
+                <component :is="selectedView"></component>
+            </div>
         </div>
-        <div class="large-9 cell dashboard-list">
-            <component :is="selectedTab" ></component>
-        </div>
-    </div>
+    </main>
 </div>
     
 </template>
@@ -27,7 +29,7 @@
         name: 'dashboard',
         data () {
             return {
-                selectedTab: 'dashboard-enquiries-list'
+                selectedView: 'dashboard-enquiries-list'
             }
         },
         components: {
@@ -39,9 +41,12 @@
             'dashboard-routines-list': routines
         },
         methods: {
-            changedTab (result) {
-                this.selectedTab = result
+            changedView (result) {
+                this.selectedView = result
             }
+        },
+        mounted () {
+            window.$(document).foundation()
         }
     }
 </script>

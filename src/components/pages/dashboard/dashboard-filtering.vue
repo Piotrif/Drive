@@ -5,7 +5,7 @@
                   <button></button>
                   <span>Vand</span>
               </div>
-              <div class="large-2 cell filter-supply">
+              <div class="large-1 cell filter-supply">
                   <button></button>
                   <span>Kloak</span>
               </div>
@@ -33,7 +33,6 @@
     export default {
         data () {
             return {
-                fefe: 'fefe'
             }
         }
     }
