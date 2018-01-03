@@ -39,7 +39,7 @@
             </div>
         </header>
         <main>
-            <guide-nav :task="true" @changeStep="changedStep" :initStep="step" :icons="iconObj"></guide-nav>
+            <guide-nav @changeStep="changedStep" :initStep="step" :icons="iconObj"></guide-nav>
             <div class="overflow content-left">
                 
                 <!-- ------------- Generel informations ------------- -->
@@ -190,7 +190,12 @@ export default {
                 weathertype: '',
                 description: ''
             },
-            iconObj: {}
+            iconObj: [
+                {icon: 'wrench'},
+                {icon: 'wrench'},
+                {icon: 'wrench'},
+                {icon: 'wrench'}
+            ]
         }
     },
     methods: {
