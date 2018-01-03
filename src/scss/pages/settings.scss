@@ -20,12 +20,16 @@
     }
     
     a{
-        padding: 10px;
+        margin: 40px;
     }
 }
 
 .settings-profile,
 .settings-organisation {
+    section{
+        margin: 0 !important;
+    }
+
     margin-top: 50px;
 }
 

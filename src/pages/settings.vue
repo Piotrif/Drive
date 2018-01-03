@@ -1,6 +1,6 @@
 <template>
     <div class="settings">
-        <div class="user-work">
+        <div class="form-view">
             <header class="header-subpage flexbox-center">
                 <div class="content-left">
                     <div class="grid-x align-items">
