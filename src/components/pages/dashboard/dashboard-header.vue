@@ -34,7 +34,7 @@
         data () {
             return {
                 selectedtab: 1,
-                kpiData: {}
+                test: {}
             }
         },
         methods: {
