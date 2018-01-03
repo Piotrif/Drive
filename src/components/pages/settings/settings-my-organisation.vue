@@ -27,7 +27,7 @@
         </nav>
       </div>
       <div class="grid-x">
-        <div class="large-5">
+        <div class="large-10 cell">
 
           <!-- Generel informations -->
           <section v-show="tab === 1">
@@ -116,7 +116,8 @@
 
           <!-- Employee-->
           <section v-show="tab === 2">
-
+              <notification-kpi></notification-kpi>
+              <list-employee></list-employee>
           </section>
 
           <!-- Information lists -->
@@ -135,20 +136,27 @@
 </template>
 
 <script>
-  export default {
-      data () {
-          return {
-              tab: 1,
-              selectedSupply: 'water'
-          }
-      },
-      methods: {
-          changeTab (selectedTab) {
-              this.tab = selectedTab
-          },
-          selectSupply (supply) {
-              this.selectedSupply = supply
-          }
-      }
-  }
+    import notificationKpi from './../../shared/kpi/kpi.vue'
+    import employeeList from './../../shared/list/list-employee.vue'
+
+    export default {
+        components: {
+            'notification-kpi': notificationKpi,
+            'list-employee': employeeList
+        },
+        data () {
+            return {
+                tab: 1,
+                selectedSupply: 'water'
+            }
+        },
+        methods: {
+            changeTab (selectedTab) {
+                this.tab = selectedTab
+            },
+            selectSupply (supply) {
+                this.selectedSupply = supply
+            }
+        }
+    }
 </script>

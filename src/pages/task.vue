@@ -1,5 +1,5 @@
 <template>
-    <div class="user-work form-view">
+    <div class="form-view">
         <header class="header-subpage">
             <div class="content-left">
                 <div class="grid-x">

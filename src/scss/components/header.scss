@@ -25,20 +25,9 @@
     position: absolute;
     padding: 45px;
     background-color: $blur-black;
-
-    .circle{
-        font-size: 2rem;
-        width: 70px; 
-        height: 70px; 
-        border: 4px solid $turquoise; 
-        border-radius: 50%;
-    }
-
-    // .alert{}
 }
 
 .dashboard-tabs{
-    margin-top: 30px;
     align-items: center;
     padding-bottom: 10px;
     
