@@ -1,1 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><defs><style>.a,.b{fill:none;stroke:#000;stroke-miterlimit:10;}.a{stroke-width:0.67px;}.b{stroke-width:1.33px;}</style></defs><title>supply-sewer</title><path d="M10,1.33h0a8.67,8.67,0,0,1,8.62,7.91A8.67,8.67,0,0,1,10,18.67,8.67,8.67,0,0,1,10,1.33M10,0a10,10,0,1,0,6.42,2.34A10,10,0,0,0,10,0Z" transform="translate(0 0)"/><line class="a" x1="3.67" y1="4.45" x2="16.88" y2="15.63"/><line class="a" x1="1.37" y1="7.65" x2="13.81" y2="18.1"/><line class="a" x1="6.88" y1="1.88" x2="18.75" y2="11.88"/><path class="b" d="M3.75,16.88c-.22.58,5.63-9.38,12.5-12.5" transform="translate(0 0)"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+<title>supply-sewer</title>
+<g>
+	<path d="M10,1.3L10,1.3c4.5,0,8.2,3.4,8.6,7.9c0.4,4.8-3.1,9-7.9,9.4c-0.2,0-0.5,0-0.7,0c-4.8,0-8.7-3.9-8.7-8.7S5.2,1.3,10,1.3
+		 M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10s10-4.5,10-10c0-3-1.3-5.8-3.6-7.7C14.6,0.8,12.3,0,10,0z"/>
+</g>
+<g>
+	<g>
+		<g>
+			<rect x="9.9" y="1.4" transform="matrix(0.646 -0.7633 0.7633 0.646 -4.0268 11.3967)" width="0.7" height="17.3"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<g>
+			<rect x="7.3" y="4.8" transform="matrix(0.6433 -0.7656 0.7656 0.6433 -7.15 10.4041)" width="0.7" height="16.2"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<g>
+			<rect x="12.5" y="-0.9" transform="matrix(0.6443 -0.7648 0.7648 0.6443 -0.7033 12.2479)" width="0.7" height="15.5"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<g>
+			<path d="M3.8,17.6c-0.1,0-0.2,0-0.3-0.1l-0.3-0.9l0.6,0.2l-0.4-0.4c0-0.1,0.1-0.2,0.3-0.4C7.9,9.7,12,5.6,16,3.8L16.5,5
+				C14,6.1,9.8,9.1,4.6,16.8C4.3,17.2,4.1,17.6,3.8,17.6z M3.8,16.9l0.6,0.2L3.8,16.9z"/>
+		</g>
+	</g>
+</g>
+</svg>

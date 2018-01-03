@@ -1,20 +1,19 @@
 <template>
-<div class="dashboard">
-    <div class="dashboard-hero-img blur"></div>
-    <dashboard-header @changeWorkView="changedView"></dashboard-header>
-    <dashboard-filtering></dashboard-filtering>
-    <main>
-        <div class="grid-x dashboard-content">
-            <div class="large-2 cell">
-                <new-work></new-work>
+    <div class="dashboard">
+        <div class="dashboard-hero-img blur"></div>
+        <dashboard-header @changeWorkView="changedView"></dashboard-header>
+        <dashboard-filtering></dashboard-filtering>
+        <main>
+            <div class="grid-x dashboard-content">
+                <div class="large-2 cell">
+                    <new-work></new-work>
+                </div>
+                <div class="large-9 cell dashboard-list">
+                    <component :is="selectedView"></component>
+                </div>
             </div>
-            <div class="large-9 cell dashboard-list">
-                <component :is="selectedView"></component>
-            </div>
-        </div>
-    </main>
-</div>
-    
+        </main>
+    </div>
 </template>
 
 <script>

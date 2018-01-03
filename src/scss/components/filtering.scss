@@ -9,12 +9,24 @@
 .filter-supply{
     display: flex;
     align-items: center;
+    cursor: pointer;
 
-    button{
-        width: 30px;
-        height: 30px;
+    div{
+        width: 35px;
+        height: 35px;
         background: #666;
         margin-right: 10px;
         border-radius: $border-radius-small;
+        border: 3px solid #666;
+
+        &.active{
+            &.water{
+                border-color: $blue;    
+            }
+
+            &.sewer{
+                border-color: $color-supply-sewer;
+            }
+        }
     }
 }

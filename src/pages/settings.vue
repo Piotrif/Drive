@@ -32,9 +32,9 @@
 
 <script>
     import leftNav from './../components/pages/settings/settings-left-nav.vue'
-    import profile from './../components/pages/settings/settings-my-profile.vue'
-    import organisation from './../components/pages/settings/settings-my-organisation.vue'
-    import companies from './../components/pages/settings/settings-my-companies.vue'
+    import profile from './../components/pages/settings/settings-profile.vue'
+    import organisation from './../components/pages/settings/settings-organisation.vue'
+    import companies from './../components/pages/settings/settings-companies.vue'
 
     export default {
         name: 'settings',
