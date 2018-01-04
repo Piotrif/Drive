@@ -5,8 +5,10 @@
     </div>
     
     <a href="#">
-        <div class="grid-x list">
-            <div class="large-1 cell">icon</div>
+        <div class="grid-x list-row supply sewer align-items">
+            <div class="large-1 cell">
+                <icon class="enquiry-svg medium-svg fill-primary" name="enquiry"></icon>
+            </div>
             <div class="large-3 cell item">
                 <span>Kolloparken 31</span>
                 <span>Anonym</span>

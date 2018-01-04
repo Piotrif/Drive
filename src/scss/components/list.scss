@@ -1,12 +1,25 @@
-.list {
-    background-color: $background-gray;
+.list-row {
+    background-color: $white;
     padding: 10px;
     color: black;
     height: 65px;
-    border-left: 6px solid $color-supply-sewer;
-	box-shadow: $list-shadow;
+    box-shadow: $list-shadow;
+    
+    &.supply{
+        > div:first-child{
+            padding-left: 16px;
+            max-width: 70px;
+        }
+        &.sewer{
+            border-left: 6px solid $color-supply-sewer;
+        }
 
-    .item {
+        &.water{
+            border-left: 6px solid $color-supply-water;
+        }
+    }
+
+    & .item {
         span {
             display: block;
         }

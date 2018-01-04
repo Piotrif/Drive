@@ -49,15 +49,17 @@
 // Group
 .settings-companies-group{
     margin-bottom: 50px;
-
+    
     & .companies-group{
         border: 1px solid $border-gray;
         padding: 10px;
         height: 150px;
         color: black;
+        background-color: $white;
     
-        & .item{
-            box-shadow: 0 0 3px #e5e5eb;
+        & .item {
+            box-shadow: 0 0 1px $border-gray;
+            border: 1px solid $border-gray;
             height: 45px;
             margin: 10px;
             align-items: center;
@@ -74,11 +76,17 @@
                 }
             }
         }
+
+        & .companies-actions{
+            & svg{
+                margin-right: 10px;
+            }
+        }
     }
 }
 
 .compani-info{
-    border-bottom: 1px solid $border-gray;
+    border-bottom: 2px solid $border-gray;
     padding-bottom: 5px;
     margin-bottom: 50px;
 
@@ -91,4 +99,10 @@
 .employee-actions,
 .companies-actions{
     margin-bottom: 10px;
+
+    & .filter-search{
+        & svg{
+            margin-right: 10px;
+        }
+    }
 }

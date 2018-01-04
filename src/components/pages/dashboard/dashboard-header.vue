@@ -22,7 +22,7 @@
                     <span>Opgaver</span>
                 </a>
                 <a :class="{'active': selectedTab === 3}" @click="changeWorkView('dashboard-routines-list', 3)">
-                    <icon class="clock-svg small-svg fill-white" name="clock"></icon>    
+                    <icon class="routine-svg small-svg fill-white" name="routine"></icon>    
                     <span>Rutiner</span>
                 </a>
             </div>

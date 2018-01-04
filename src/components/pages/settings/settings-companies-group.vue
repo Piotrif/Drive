@@ -1,9 +1,9 @@
 <template>
     <div class="settings-companies-group">
         <div class="grid-x align-items companies-actions">
-            <div class="large-4 cell flexbox-start">
-                <icon class="search-svg small-svg fill-dark-gray" name="search"></icon>
-                <input type="text" class="large-2 search-bottom-border" placeholder="Søg på firma">
+            <div class="large-4 cell flexbox-start filter-search">
+                <icon class="search-svg small-svg fill-medium-gray" name="search"></icon>
+                <input type="text" class="large-2 search-bottom-border" placeholder="Søg efter firma">
             </div>
             <div class="large-auto cell">
                 <button class="float-right">Tilføj</button>

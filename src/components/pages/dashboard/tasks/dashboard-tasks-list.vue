@@ -5,7 +5,7 @@
     </div>
     
     <a href="#">
-        <div class="grid-x list">
+        <div class="grid-x list-row">
             <div class="large-1 cell">icon</div>
             <div class="large-3 cell item">
                 <span>Kolloparken 31</span>

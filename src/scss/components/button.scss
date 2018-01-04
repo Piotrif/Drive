@@ -1,10 +1,16 @@
+@mixin button-base{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
 .button {
+  @include button-base;
   border-radius: 4px;
   background-color: $blue;
   padding: 13px 28px;
   padding-left: 25px;
   font-size: 0.8rem;
-  cursor: pointer;
   font-weight: 500;
   border: 0px;
   -webkit-transition: box-shadow .3s ease;
@@ -19,7 +25,29 @@
     box-shadow: 0px 2px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.07), 0px 1px 4px 0px rgba(0, 0, 0, 0.10);
   }
 }
-  
+
+.button-small{
+  padding: 8px;
+    border-radius: 4px;
+    background-color: $blue;
+    font-size: 0.8rem;
+    @include button-base;
+    font-weight: 500;
+    border: 0px;
+    -webkit-transition: box-shadow .3s ease;
+    -webkit-transition: -webkit-box-shadow .3s ease;
+    transition: -webkit-box-shadow .3s ease;
+    transition: box-shadow .3s ease;
+    transition: box-shadow .3s ease, -webkit-box-shadow .3s ease;
+    color: #fff;
+
+  &:hover, &:active, &:focus {
+    background-color: $blue;
+    color: $white;
+    box-shadow: 0px 2px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.07), 0px 1px 4px 0px rgba(0, 0, 0, 0.10);
+  }
+}
+
 .button-big {
   padding: 20px 30px;
   width: auto;
@@ -83,8 +111,6 @@
   border: 1px solid $color-primary;
 } 
 .button-new{
+  @include button-base;
   @include floating-button;
-  // &.enquiry{
-  
-  // }
 }

@@ -27,7 +27,7 @@
             <div class="flexbox-center flex-column">
                 <div class="circle-big flexbox-center">
                     <div class="kpi-notification flexbox-center circle-small">
-                        <icon class="routine-svg small-svg fill-white" name="routine"></icon>
+                        <icon class="task-check-svg small-svg fill-white" name="task-check"></icon>
                     </div>
                     <span>{{ tasksApproveReadyCounter }}</span>
                 </div>
