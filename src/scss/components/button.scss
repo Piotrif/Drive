@@ -3,21 +3,22 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-.button {
-  @include button-base;
+  -webkit-transition: background-color .3s ease, color .3s ease;
+  transition: background-color .3s ease, color .3s ease;
+  color: $white;
   border-radius: 4px;
-  background-color: $blue;
-  padding: 13px 28px;
-  padding-left: 25px;
+  border: 0px;
   font-size: 0.8rem;
   font-weight: 500;
-  border: 0px;
-  -webkit-transition: box-shadow .3s ease;
-  transition: box-shadow .3s ease;
-  color: $white;
+  background-color: $blue;
+}
+
+.button {
+  @include button-base;
+
+  padding: 13px 28px;
+  padding-left: 25px;
   width: 100%;
-  margin-top: 10px;
 
   &:hover, &:active, &:focus {
     background-color: $blue;
@@ -27,19 +28,13 @@
 }
 
 .button-small{
+  @include button-base;
+  width: 115px;
   padding: 8px;
-    border-radius: 4px;
-    background-color: $blue;
-    font-size: 0.8rem;
-    @include button-base;
-    font-weight: 500;
-    border: 0px;
-    -webkit-transition: box-shadow .3s ease;
-    -webkit-transition: -webkit-box-shadow .3s ease;
-    transition: -webkit-box-shadow .3s ease;
-    transition: box-shadow .3s ease;
-    transition: box-shadow .3s ease, -webkit-box-shadow .3s ease;
-    color: #fff;
+
+  & svg{
+    margin-right: 5px;
+  }
 
   &:hover, &:active, &:focus {
     background-color: $blue;
@@ -58,8 +53,6 @@
   background-color: transparent;
   color: $white;
   border: 1px solid $white;
-  -webkit-transition: background-color .3s ease, color .3s ease;
-  transition: background-color .3s ease, color .3s ease;
 
   &:hover, &:active, &:focus {
     background-color: $white;

@@ -1,75 +1,78 @@
 <template>
     <div>
         <modal v-if="showModal" :data="accordionSelected" :modalType="modalType" @close="closeModal"></modal>
-        <div class="grid-x accordion-counter">
-            <div class="large-8 cell">
+        <div class="grid-x accordion-counter align-items">
+            <div class="large-7 cell customContentInsertion">
                 <span>4 aktiviteter</span>
             </div>
+            <div class="large-1 cell">
+                <button>
+                    <icon class="bin-svg small-svg fill-dark-gray" name="bin"></icon>
+                </button>
+            </div>
             <div class="large-2 cell">
-                <a>ikon</a>
-                <a @click="openModal('task-modal-routine')" :class="{'disabled': accordionSelected == false}">opret rutine</a>
+                <a class="button-small" @click="openModal('task-modal-routine')" :class="{'disabled': accordionSelected == false}">
+                    <icon class="routine-svg small-svg fill-white" name="routine"></icon>
+                    opret rutine
+                </a>
             </div>
         </div>
+
         <!-- ------------- Header ------------- -->
-        <div v-for="activity in activities" v-bind:key="activity.id">
-            <div class="grid-x align-items" >
-                <div style="width: 23px;" @click="toggleContent(activity.id)">
-                    pil
+        <div v-for="(activity, index) in activities" v-bind:key="activity.id">
+            <div class="grid-x align-items">
+                <!-- <div class="large-1 cell icon-cell accordion-toggle" @click="toggleContent(activity.id)"> -->
+                <div class="large-1 cell icon-cell accordion-toggle" @click="accordionOpen(index)">
+                    <icon class="chevron-right-svg big-svg fill-dark-gray" name="chevron-right"></icon>
                 </div>
                 <div class="large-10 cell">
                     <div class="grid-x accordion row align-items" @click="select(activity)" :class="{'selected': accordionSelected.id == activity.id}">
                         <div class="large-3 cell item">
                             <span>{{activity.task}}</span>
                         </div>
-                        <div class="large-4 cell item">
+                        <div class="large-3 cell item">
                             <span>{{activity.user}}</span>
                             <span>{{activity.work}}</span>
                         </div>
-                        <div class="large-2 cell item">
+                        <div class="large-3 cell item">
                             <span>{{activity.timeFrom | formatDate}} - {{activity.timeTo | formatDate}}</span>
+                        </div>
+                        <div class="large-1 cell item">
+                            <icon class="bubble-svg medium-svg fill-dark-gray" name="bubble"></icon>
                         </div>
                         <div class="large-2 cell item flexbox-center">
                             <div class="activity-status">{{activity.status}}</div>
                         </div>
                     </div>
                 </div>
-                <div style="margin-left: 23px;">
-                    blyant
+                <div class="accordion-edit">
+                    <icon class="pencil-svg medium-svg fill-dark-gray" name="pencil"></icon>
                 </div>
             </div>
-
+            <p>{{ activity.isOpen }}</p>
             <!-- ------------- Content ------------- -->
             <div class="grid-x">
-                <div style="margin-left: 23px;" class="large-10 cell accordion content" v-if="contentVisible == activity.id">
-                    <div class="grid-x">
-                        <div class="large-1 cell">
-                            <span>ikon</span>
+                <!-- <div class="large-10 cell accordion customContentInsertion" v-if="contentVisible == activity.id"> -->
+                <div class="large-10 cell accordion customContentInsertion" v-if="activity.isOpen">
+                    <div class="grid-x content">
+                        <div class="large-1 cell flexbox-center">
+                            <icon class="location-svg small-svg fill-dark-gray" name="location"></icon>
                         </div>
-                        <div class="large-5 cell">
+                        <div class="large-10 cell">
                             <span>Knude BBA0140 T:Brønd Sy:Fælles</span>
                         </div>
                         <div class="large-1 cell">
-                            <span>ikon</span>
+                            <icon class="bin-svg small-svg fill-dark-gray" name="bin"></icon>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="grid-x">
-            <div class="large-10 cell new-accordion flexbox-center" @click="openModal('task-modal-activity')" style="margin-left: 23px">
+            <div class="large-10 cell new-accordion flexbox-center customContentInsertion" @click="openModal('task-modal-activity')">
                 <p>Tilføj aktivitet</p>
             </div>
         </div>
-        <!-- <div class="grid-x align-items" >
-            <div style="width: 23px;">
-            </div>
-            <div class="large-10 cell">
-                <div class="grid-x accordion row align-items" @click="createNew">
-                    <p>Tilføj aktivitet</p>
-                </div>
-            </div>
-            <div class="large-2 cell"></div>
-        </div> -->
     </div>
 </template>
 
@@ -79,6 +82,7 @@ import modal from './../../shared/modal/modal.vue'
 export default {
     data () {
         return {
+            // isOpen: false,
             contentVisible: false,
             accordionSelected: false,
             showModal: false,
@@ -93,16 +97,8 @@ export default {
         modal
     },
     methods: {
-        toggleContent (id) {
-            if (this.contentVisible === id) {
-                this.contentVisible = false
-            } else {
-                this.contentVisible = id
-            }
-
-            if (this.contentVisible) {
-                this.$emit('content-visible', this)
-            }
+        accordionOpen (index) {
+            this.activities[index].isOpen = !this.activities[index].isOpen
         },
         select (activity) {
             if (this.accordionSelected.id === activity.id) {

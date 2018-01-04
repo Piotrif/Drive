@@ -1,23 +1,12 @@
-.accordion-counter {
-    margin-bottom: 10px;
+.customContentInsertion{
     margin-left: 23px;
 }
 
-.new-accordion {
-    height: 55px;
-    margin-top: 10px;
-    border: 1px dotted $medium-gray;
-    text-align: center;
-    border-radius: 3px;
-    cursor: pointer;
-
-    & p {
-        margin-bottom: 0px;
-    }
+.accordion-counter {
+    margin-bottom: 10px;
 }
 
 .accordion {
-    // padding: 10px;
     color: black;
     cursor: pointer;
     box-shadow: $list-shadow;
@@ -25,8 +14,8 @@
     &.row{
         margin-top: 10px;
         height: 55px;
-        background-color: $background-gray;
-        //line-height: 30px;
+        background-color: $white;
+        padding: 15px;
 
         .item {
             span{
@@ -43,25 +32,61 @@
         }
 
         &.selected{
-            background-color: $selected-gray;
-        }
+            //box-shadow: $list-shadow-selected;
+            background-color: $color-primary;
+            color: $white;
+        }   
     }
     
-    &.content{
+    & .content{
+        padding: 30px;
         background-color: $white;
         margin-bottom: 10px;
 
-        .grid-x:not(.process-actions){
-            padding-left: 30px;
+        & .grid-x:not(.process-actions){
+            padding-left: 45px;
             padding-top: 10px;
             margin-bottom: 20px;
         }
 
-        .grid-x.process-actions{
+        & .grid-x.process-actions{
             background-color: $background-gray;
             height: 55px;
         }
-    }
 
-    
+        & .entrepreneur-work{
+            & .cell{
+                display: flex;
+                align-content: center;
+            }
+
+            & svg{
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.accordion-toggle{
+    margin-left: -27px !important;
+    cursor: pointer;
+}
+
+.accordion-edit{
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.new-accordion {
+    background-color: $white;
+    height: 55px;
+    margin-top: 10px;
+    border: 1px dashed $medium-gray;
+    text-align: center;
+    border-radius: $border-radius-small;
+    cursor: pointer;
+
+    & p {
+        margin-bottom: 0px;
+    }
 }

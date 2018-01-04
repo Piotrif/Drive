@@ -48,8 +48,11 @@
                         <div class="large-10 cell">
                             <h2>Oplysninger</h2>
                         </div>
-                        <div class="large-2 cell flexbox">
-                            <button class="float-right">Slet opgave</button>
+                        <div class="large-2 cell">
+                            <button class="button button-small">
+                                <icon class="bin-svg small-svg fill-white" name="bin"></icon>
+                                Slet opgave
+                            </button>
                         </div>
                     </div>
                     
@@ -64,7 +67,8 @@
                             <div class="auto cell border-bottom">
                                <select id="selectTemplate">
                                     <option value="0">Ingen</option>
-                                    <option value="0">Arkil 4 opgaver</option>
+                                    <option value="1">Ny skabelon</option>
+                                    <option value="2">Arkil 4 opgaver</option>
                                 </select>
                             </div>
                         </div>
@@ -122,8 +126,11 @@
                         <div class="large-8 cell">
                             <h2>Aktiviteter</h2>
                         </div>
-                        <div class="large-1 cell">
-                            <button>Rekvirer</button>
+                        <div class="large-1 cell customContentInsertion">
+                            <button class="button-small">
+                                <icon class="envelope-svg small-svg fill-white" name="envelope"></icon>
+                                Rekvirer
+                            </button>
                         </div>
                     </div>
                     <accordion-activities></accordion-activities>
@@ -136,7 +143,10 @@
                             <h2>Entreprenøropgaver</h2>
                         </div>
                         <div class="large-2 cell">
-                            <button>Godkend alle</button>
+                            <button class="button-small">
+                                <icon class="checkmark-svg small-svg fill-white" name="checkmark"></icon>
+                                Godkend
+                            </button>
                         </div>
                     </div>
                     <accordion-entrepreneur></accordion-entrepreneur>
