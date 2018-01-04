@@ -10,12 +10,11 @@
   border: 0px;
   font-size: 0.8rem;
   font-weight: 500;
-  background-color: $blue;
 }
 
 .button {
   @include button-base;
-
+  background-color: $blue;
   padding: 13px 28px;
   padding-left: 25px;
   width: 100%;
@@ -31,7 +30,7 @@
   @include button-base;
   width: 115px;
   padding: 8px;
-
+  background-color: $blue;
   & svg{
     margin-right: 5px;
   }
@@ -135,7 +134,8 @@
   height: 70px; 
   border-radius: 50%; 
   border: 1px solid $color-primary;
-} 
+}
+
 .button-new{
   @include button-base;
   @include floating-button;

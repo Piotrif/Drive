@@ -21,8 +21,7 @@
         <!-- ------------- Header ------------- -->
         <div v-for="(activity, index) in activities" v-bind:key="activity.id">
             <div class="grid-x align-items">
-                <!-- <div class="large-1 cell icon-cell accordion-toggle" @click="toggleContent(activity.id)"> -->
-                <div class="large-1 cell icon-cell accordion-toggle" @click="accordionOpen(index)">
+                <div class="large-1 cell icon-cell accordion-toggle" @click="openAccordion(index)">
                     <icon class="chevron-right-svg big-svg fill-dark-gray" name="chevron-right"></icon>
                 </div>
                 <div class="large-10 cell">
@@ -49,11 +48,9 @@
                     <icon class="pencil-svg medium-svg fill-dark-gray" name="pencil"></icon>
                 </div>
             </div>
-            <p>{{ activity.isOpen }}</p>
             <!-- ------------- Content ------------- -->
             <div class="grid-x">
-                <!-- <div class="large-10 cell accordion customContentInsertion" v-if="contentVisible == activity.id"> -->
-                <div class="large-10 cell accordion customContentInsertion" v-if="activity.isOpen">
+                <div class="large-10 cell accordion customContentInsertion" v-if="accordionsOpen[index]">
                     <div class="grid-x content">
                         <div class="large-1 cell flexbox-center">
                             <icon class="location-svg small-svg fill-dark-gray" name="location"></icon>
@@ -82,7 +79,7 @@ import modal from './../../shared/modal/modal.vue'
 export default {
     data () {
         return {
-            // isOpen: false,
+            accordionsOpen: [],
             contentVisible: false,
             accordionSelected: false,
             showModal: false,
@@ -97,8 +94,8 @@ export default {
         modal
     },
     methods: {
-        accordionOpen (index) {
-            this.activities[index].isOpen = !this.activities[index].isOpen
+        openAccordion (index) {
+            this.$set(this.accordionsOpen, index, !this.accordionsOpen[index])
         },
         select (activity) {
             if (this.accordionSelected.id === activity.id) {
@@ -116,6 +113,9 @@ export default {
         closeModal () {
             this.showModal = false
         }
+    },
+    created () {
+        this.accordionsOpen.length = this.activities.length
     },
     filters: {
         formatDate (date) {
