@@ -31,8 +31,18 @@
     align-items: center;
     padding-bottom: 10px;
     
-    button{
+    a{
         color: $white;
-        margin-left: 100px;
+        margin: 35px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid transparent;
+
+        & * {
+            vertical-align: middle;
+        }
+
+        &.active{
+            border-bottom: 3px solid $white;
+        }
     }
 }

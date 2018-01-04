@@ -4,14 +4,16 @@
     }
 }
 
+// Menu
 .side-left-menu{
     li{
         height: 100px;
     }
 
-    border-right: 1px solid $gray;
+    border-right: 1px solid $border-gray;
 }
 
+// Nav
 .settings-top-nav{
     margin-bottom: 70px;
 
@@ -24,8 +26,10 @@
     }
 }
 
+// Sections
 .settings-profile,
-.settings-organisation {
+.settings-organisation,
+.settings-companies {
     section{
         margin: 0 !important;
     }
@@ -33,10 +37,72 @@
     margin-top: 50px;
 }
 
+// Profile
 .change-profile-pic{
     border: 1px solid $color-primary;
     border-radius: 50%;
     width: 100px;
     height: 100px;
     margin-bottom: 70px;
+}
+
+// Group
+.settings-companies-group{
+    margin-bottom: 50px;
+    
+    & .companies-group{
+        border: 1px solid $border-gray;
+        padding: 10px;
+        height: 150px;
+        color: black;
+        background-color: $white;
+    
+        & .item {
+            box-shadow: 0 0 1px $border-gray;
+            border: 1px solid $border-gray;
+            height: 45px;
+            margin: 10px;
+            align-items: center;
+            display: flex;
+            justify-content: space-evenly;
+            border-radius: $border-radius-small;
+    
+            &.selected{
+                background-color: $dark-gray;
+                color: $white;
+    
+                & svg{
+                    fill: $white !important;
+                }
+            }
+        }
+
+        & .companies-actions{
+            & svg{
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.compani-info{
+    border-bottom: 2px solid $border-gray;
+    padding-bottom: 5px;
+    margin-bottom: 50px;
+
+    & svg{
+        margin-right: 10px;
+    }
+}
+
+// Actions
+.employee-actions,
+.companies-actions{
+    margin-bottom: 10px;
+
+    & .filter-search{
+        & svg{
+            margin-right: 10px;
+        }
+    }
 }

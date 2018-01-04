@@ -1,8 +1,20 @@
-.kpi-notification{
+.kpi{
     margin-bottom: 30px;
 }
 
-.circle{
+.kpi-notification{
+    position: absolute;
+    margin-left: 28px;
+    margin-top: -22px;
+  }
+
+.circle-small{
+    width: 30px; 
+    height: 30px; 
+    background-color: $turquoise;
+    border-radius: 50%
+}
+.circle-big{
     font-size: 2rem;
     width: 70px; 
     height: 70px; 

@@ -7,19 +7,20 @@ $list-shadow: 0 0 3px hsla(240, 14%, 91%, 1);
 $box-shadow: 0 0 3px #e5e5eb;
 $shadow-color: #e5e5eb;
 
-// Selected
-$selected-gray:      #f0f0f4;
-
 $black:              #424242;
 $white:              #fff;
 $blue:               #5293be;
 $red:                #ec0d0d;
 $green:              green;
 
+// Vi har mange gray :D - cleanup perhaps
 $light-gray:         #ececec;
 $gray:               #efeded;
 $background-gray:    #fbfbfc;
 $medium-gray:        #bebebe;
 $dark-gray:          #82868d;
+$border-gray:        #e5e5eb;
+$selected-gray:      #f0f0f4;
 
 $color-supply-sewer: #b1c92d;
+$color-supply-water: #4f81bc;
