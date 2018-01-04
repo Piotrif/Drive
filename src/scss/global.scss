@@ -62,7 +62,7 @@ ul {
 /**********************************/
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto', Helvetica, Arial, sans-serif !important;
+  font-family: 'Barlow', 'Roboto', Helvetica, Arial, sans-serif !important;
   font-weight: 500;
 }
 
@@ -215,26 +215,59 @@ h6 {
               list-style-type: inherit;
               margin: 0;
               padding: 0;
-              border: 1px solid $black;
-              background-color: $white;
+              border-radius: 3px;
+              border-top-left-radius: 0px;
+              border-bottom-left-radius: 0px;
+              background-color: $light-gray;
             
               & li {
                 display: block;
-                
+                border-top: 1px solid $white;
+
+                &:first-child {
+                  border-top: 0px;
+
                   &.active {
-                      background-color: $blue;
+                    border-top-right-radius: 3px;
+                  }
+                }
+
+                &:last-child.active {
+                  border-bottom-right-radius: 3px;
+                }
+                
+                &.active {
+                    background-color: $dark-blue;
+                    color: $white;
+                    text-align: center;
+
+                    & span {
                       color: $white;
-                  }
+                    }
 
-                  & a {
+                    & svg {
+                      fill: $white;
+                    }
+                }
+
+                & a {
+                    display: block;
+                    cursor: pointer;
+                    padding: 15px 20px;
+                    text-align: center;
+
+                    & svg {
+                        width: 28px;
+                    }
+
+                    & span {
                       display: block;
-                      cursor: pointer;
-                      padding: 15px 20px;
-
-                      & .wrench-svg {
-                          width: 28px;
-                      }
-                  }
+                      font-size: 0.6rem;
+                      text-align: center;
+                      color: $black;
+                      margin-top: -5px;
+                    }
+                }
 
               }
           }
@@ -398,6 +431,7 @@ $circle-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
   
 .flexbox-centertext {
   display: flex;

@@ -37,7 +37,7 @@
       <div class="grid-x">
         <div class="large-10 cell">
           <notification-kpi></notification-kpi>
-          <list-employee></list-employee>
+          <list-employee @open="openModal(view)"></list-employee>
         </div>
       </div>
   </div>
@@ -57,6 +57,11 @@
         data () {
             return {}
         },
-        methods: {}
+        methods: {
+            openModal (view) {
+                console.log('open modal settings companies')
+                this.$emit('open', view)
+            }
+        }
     }
 </script>

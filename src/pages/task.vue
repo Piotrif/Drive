@@ -191,10 +191,10 @@ export default {
                 description: ''
             },
             iconObj: [
-                {icon: 'wrench'},
-                {icon: 'wrench'},
-                {icon: 'wrench'},
-                {icon: 'wrench'}
+                {icon: 'wrench', text: 'Ikon'},
+                {icon: 'wrench', text: 'Ikon'},
+                {icon: 'wrench', text: 'Ikon'},
+                {icon: 'wrench', text: 'Ikon'}
             ]
         }
     },
