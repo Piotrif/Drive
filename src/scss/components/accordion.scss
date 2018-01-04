@@ -3,6 +3,19 @@
     margin-left: 23px;
 }
 
+.new-accordion {
+    height: 55px;
+    margin-top: 10px;
+    border: 1px dotted $medium-gray;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+
+    & p {
+        margin-bottom: 0px;
+    }
+}
+
 .accordion {
     // padding: 10px;
     color: black;

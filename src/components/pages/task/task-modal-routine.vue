@@ -7,15 +7,15 @@
         </p>
         <div class="form">
             <div class="grid-x">
-                <div class="large-3 medium-3 small-3 cell border-bottom">
+                <div class="large-3 medium-3 small-3 cell border-bottom custom-margin-top">
                     <icon class="user small-svg" name="user"></icon>
                     <span>Interval</span>
                 </div>
-                <div class="auto cell border-bottom select-supply">
-                    <div class="button-filter-round water" @click="selectTimeStamp('fixed')" :class="{'selected-supply-water': selectedTimeStamp == 'fixed'}">
+                <div class="auto cell border-bottom select-item">
+                    <div class="button-filter-round" @click="selectTimeStamp('fixed')" :class="{'selected-item': selectedTimeStamp == 'fixed'}">
                         <icon class="history small-svg" name="history"></icon>
                     </div><span>Fast tidpunkt</span>
-                    <div class="button-filter-round sewer" @click="selectTimeStamp('current')" :class="{'selected-supply-sewer': selectedTimeStamp == 'current'}">
+                    <div class="button-filter-round" @click="selectTimeStamp('current')" :class="{'selected-item': selectedTimeStamp == 'current'}">
                         <icon class="history small-svg" name="history"></icon>
                     </div><span>Løbende interval</span>
                 </div>
@@ -23,7 +23,7 @@
         </div>
         <div class="form">
             <div class="grid-x">
-                <div class="large-3 medium-3 small-3 cell border-bottom">
+                <div class="large-3 medium-3 small-3 cell border-bottom custom-margin-top">
                     <icon class="user small-svg" name="user"></icon>
                     <span>Gentag</span>
                 </div>
@@ -48,11 +48,15 @@
                         </div>
                         <div class="large-8 cell">
                             <div class="buttons grid-x">
-                                <div class="large-6 cell flexbox-center" @click="subtractNumber">
-                                    <icon class="small-svg" name="user"></icon>
+                                <div class="large-6 cell flexbox-center relative">
+                                    <button @click="subtractNumber" type="button" class="absolute-full cursor">
+                                        <icon class="small-svg" name="user"></icon>
+                                    </button>
                                 </div>
-                                <div class="large-6 cell flexbox-center" @click="addNumber">
-                                    <icon class="small-svg" name="user"></icon>
+                                <div class="large-6 cell flexbox-center relative">
+                                    <button @click="addNumber" type="button" class="absolute-full cursor">
+                                        <icon class="small-svg" name="user"></icon>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +66,7 @@
         </div>
         <div class="form">
             <div class="grid-x">
-                <div class="large-3 medium-3 small-3 cell border-bottom">
+                <div class="large-3 medium-3 small-3 cell border-bottom custom-margin-top">
                     <icon class="user small-svg" name="user"></icon>
                     <span>Periode</span>
                 </div>
@@ -80,9 +84,9 @@
             </div>
         </div>
 
-        <div class="float-right">
-            <a @click="closeModal">Annuller</a>
-            <a>Gem</a>
+        <div class="text-center buttons-modal">
+            <a @click="closeModal">Opret</a>
+            <a @click="closeModal">Fortryd</a>
         </div>
     </div>
 </template>

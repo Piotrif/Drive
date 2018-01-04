@@ -1,13 +1,13 @@
 <template>
     <div>
-        <modal v-if="showModal" :data="accordionSelected" :modalType="'task-modal-routine'" @close="closeModal"></modal>
+        <modal v-if="showModal" :data="accordionSelected" :modalType="modalType" @close="closeModal"></modal>
         <div class="grid-x accordion-counter">
             <div class="large-8 cell">
                 <span>4 aktiviteter</span>
             </div>
             <div class="large-2 cell">
                 <a>ikon</a>
-                <a @click="openModal">opret rutine</a>
+                <a @click="openModal('task-modal-routine')" :class="{'disabled': accordionSelected == false}">opret rutine</a>
             </div>
         </div>
         <!-- ------------- Header ------------- -->
@@ -54,8 +54,22 @@
                     </div>
                 </div>
             </div>
-
         </div>
+        <div class="grid-x">
+            <div class="large-10 cell new-accordion flexbox-center" @click="openModal('task-modal-activity')" style="margin-left: 23px">
+                <p>Tilføj aktivitet</p>
+            </div>
+        </div>
+        <!-- <div class="grid-x align-items" >
+            <div style="width: 23px;">
+            </div>
+            <div class="large-10 cell">
+                <div class="grid-x accordion row align-items" @click="createNew">
+                    <p>Tilføj aktivitet</p>
+                </div>
+            </div>
+            <div class="large-2 cell"></div>
+        </div> -->
     </div>
 </template>
 
@@ -68,6 +82,7 @@ export default {
             contentVisible: false,
             accordionSelected: false,
             showModal: false,
+            modalType: null,
             activities: [
                 { id: 1, task: 'Indstilling / kalibrering', user: 'John Hansen', work: 'Arkil', timeFrom: 'Wed Jan 03 2018 13:06:27 GMT+0100 (Romance Standard Time)', timeTo: 'Wed Jan 05 2018 13:06:27 GMT+0100 (Romance Standard Time)', status: 'Ikke rekvireret' },
                 { id: 2, task: 'Indstilling / kalibrering', user: 'Erik Nielsen', work: 'Arkil', timeFrom: 'Wed Jan 05 2018 13:06:27 GMT+0100 (Romance Standard Time)', timeTo: 'Wed Jan 08 2018 13:06:27 GMT+0100 (Romance Standard Time)', status: 'Ikke rekvireret' }
@@ -96,8 +111,11 @@ export default {
                 this.accordionSelected = activity
             }
         },
-        openModal () {
-            this.showModal = true
+        openModal (type) {
+            if (type === 'task-modal-activity' || this.accordionSelected !== false) {
+                this.showModal = true
+                this.modalType = type
+            }
         },
         closeModal () {
             this.showModal = false

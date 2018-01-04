@@ -111,6 +111,31 @@ h6 {
   max-width: 89em;
 }
 
+.relative {
+  position: relative;
+}
+
+.absolute-full {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.disabled {
+  color: $gray;
+  cursor: not-allowed;
+
+  &:hover {
+    color: $gray;
+  }
+}
+
 .form-view {
   & .header-subpage {
       padding: 20px 0px;
@@ -210,7 +235,7 @@ h6 {
 
               & input, & select, & textarea {
                   margin-bottom: 0px;
-                  margin-top: 8px;
+                  // margin-top: 8px;
               }
 
               & .selected-supply-sewer {
