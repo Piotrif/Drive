@@ -5,6 +5,7 @@
                 <li v-for="(item, index) in icons" v-bind:key="index" :class="{'active': activeStep === index + 1}">
                     <a @click="changeStep(index + 1)">
                         <icon class="small-svg" :name="item.icon"></icon>
+                        <span>{{item.text}}</span>
                     </a>
                 </li>
             </ul>

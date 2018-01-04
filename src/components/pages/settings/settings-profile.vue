@@ -4,14 +4,14 @@
             <div class="large-5">
                 <div class="grid-x flexbox-center">
                     <div class="change-profile-pic flexbox-center">
-                        <span>profilbillede</span>
+                        <icon class="user medium-svg" name="user"></icon>
                     </div>
                 </div>
                 <section>
                     <div class="form">
                         <div class="grid-x">
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                <img src="./../../../assets/svg/user.svg" alt="user svg" class="user-svg">
+                                <icon class="user small-svg" name="user"></icon>
                             </div>
                             <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Navn</p>
@@ -25,7 +25,7 @@
                     <div class="form">
                         <div class="grid-x">
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                <img src="./../../../assets/svg/user.svg" alt="user svg" class="user-svg">
+                                <icon class="user small-svg" name="user"></icon>
                             </div>
                             <div class="large-3 medium-3 small-3 cell border-bottom">
                                 <p>Telefon</p>
@@ -39,26 +39,26 @@
                     <div class="form">
                         <div class="grid-x">
                             <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                <img src="./../../../assets/svg/user.svg" alt="user svg" class="user-svg">
+                                <icon class="user small-svg" name="user"></icon>
                             </div>
                             <div class="large-3 medium-3 small-3 cell">
-                                <p>Kodeord</p>
+                                <p style="padding-top: 16px;">Kodeord</p>
                             </div>
                             <div class="auto cell">
-                                <button @click="showPasswdForm = !showPasswdForm" class="button">Skift kodeord</button>
+                                <button @click="showPasswordForm = !showPasswordForm" class="button">Skift kodeord</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Password change -->
-                    <div id="changeUserPasswd" v-show="showPasswdForm">
+                    <div id="changeUserPasswd" v-show="showPasswordForm">
                         <div class="form">
                             <div class="grid-x">
                                 <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                    <img src="./../../../assets/svg/user.svg" alt="user svg" class="user-svg">
+                                    <icon class="user small-svg" name="user"></icon>
                                 </div>
                                 <div class="large-3 medium-3 small-3 cell">
-                                    <p>Nuværende koderod</p>
+                                    <p>Nuværende</p>
                                 </div>
                                 <div class="auto cell">
                                     <input type="text">
@@ -69,7 +69,7 @@
                         <div class="form">
                             <div class="grid-x">
                                 <div class="large-1 medium-1 small-1 cell flexbox-center">
-                                    <img src="./../../../assets/svg/user.svg" alt="user svg" class="user-svg">
+                                    <icon class="user small-svg" name="user"></icon>
                                 </div>
                                 <div class="large-3 medium-3 small-3 cell">
                                     <p>Nyt kodeord</p>
@@ -90,7 +90,7 @@
     export default {
         data () {
             return {
-                showPasswdForm: false
+                showPasswordForm: false
             }
         }
     }
