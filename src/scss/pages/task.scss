@@ -1,3 +1,85 @@
 .activity-accordion {
     margin-left: 23px;
 }
+
+.time-group {
+    margin-bottom: 35px;
+
+    & .cell {
+        text-align: center;
+
+        & div {
+            padding: 8px 10px;
+            border: 1px solid $gray;
+            border-radius: 4px;
+            margin-right: 3px;
+            margin-left: 3px;
+            cursor: pointer;
+
+            &.selected-time {
+                border: 2px solid $dark-gray;
+                position: relative;
+
+                &:after {
+                    content: '';
+                    border-left: 3px solid #82868d;
+                    border-top: 3px solid #82868d;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    bottom: -33px;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
+                    transform: rotate(45deg);
+                    -moz-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    -o-transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                    border-radius: 2px;
+                }
+            }
+        }
+    }
+}
+
+.buttons {
+    text-align: center;
+    border: 1px solid $gray;
+    border-radius: $border-radius-small;
+    width: 150px;
+
+    & div {
+        position: relative;
+        padding: 5px;
+        padding-bottom: 0px;
+
+        &:first-child {
+            border-right: 1px solid $gray;
+        }
+    }
+}
+
+.form-view main section .form .flexbox-centertext p {
+    padding-top: 0px;
+    margin-right: 10px;
+} 
+
+.seperator {
+    padding-top: 8px !important;
+}
+
+.input-with-icon {
+    position: relative;
+
+    & input {
+        padding-right: 35px;
+    }
+
+    & svg {
+        position: absolute;
+        right: 9px;
+        top: 26px;
+        fill: $dark-gray;
+    }
+}

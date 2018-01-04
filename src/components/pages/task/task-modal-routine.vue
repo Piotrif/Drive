@@ -1,68 +1,136 @@
 <template>
     <div>
+        <h3 class="text-center">Ny rutine</h3>
+        <p class="text-center">
+            <span>{{data.task}} - </span>
+            <span>{{data.user}}</span>
+        </p>
         <div class="form">
             <div class="grid-x">
-                <div class="large-1 medium-1 small-1 cell flexbox-center">
-                    <icon class="user small-icon" name="user"></icon>
-                </div>
                 <div class="large-3 medium-3 small-3 cell border-bottom">
-                    <p>Aktivitet</p>
+                    <icon class="user small-svg" name="user"></icon>
+                    <span>Interval</span>
                 </div>
-                <div class="auto cell border-bottom">
-                    <div class="button-filter-round water" @click="selectSupply('water')" :class="{'selected-supply-water': selectedSupply == 'water'}"></div><span>Fast tidpunkt</span>
-                    <div class="button-filter-round sewer" @click="selectSupply('sewer')" :class="{'selected-supply-sewer': selectedSupply == 'sewer'}"></div><span>Løbende interval</span>
+                <div class="auto cell border-bottom select-supply">
+                    <div class="button-filter-round water" @click="selectTimeStamp('fixed')" :class="{'selected-supply-water': selectedTimeStamp == 'fixed'}">
+                        <icon class="history small-svg" name="history"></icon>
+                    </div><span>Fast tidpunkt</span>
+                    <div class="button-filter-round sewer" @click="selectTimeStamp('current')" :class="{'selected-supply-sewer': selectedTimeStamp == 'current'}">
+                        <icon class="history small-svg" name="history"></icon>
+                    </div><span>Løbende interval</span>
                 </div>
             </div>
         </div>
         <div class="form">
             <div class="grid-x">
-                <div class="large-1 medium-1 small-1 cell flexbox-center">
-                    <icon class="user small-icon" name="user"></icon>
-                </div>
                 <div class="large-3 medium-3 small-3 cell border-bottom">
-                    <p>Gentag</p>
+                    <icon class="user small-svg" name="user"></icon>
+                    <span>Gentag</span>
                 </div>
                 <div class="auto cell border-bottom">
+                    <div class="grid-x time-group">
+                        <div class="large-3 cell">
+                            <div @click="changeTime('daily')" :class="{'selected-time': selectedTime == 'daily'}">Daglig</div>
+                        </div>
+                        <div class="large-3 cell">
+                            <div @click="changeTime('weekly')" :class="{'selected-time': selectedTime == 'weekly'}">Ugelig</div>
+                        </div>
+                        <div class="large-3 cell">
+                            <div @click="changeTime('monthly')" :class="{'selected-time': selectedTime == 'monthly'}">Månedlig</div>
+                        </div>
+                        <div class="large-3 cell">
+                            <div @click="changeTime('yearly')" :class="{'selected-time': selectedTime == 'yearly'}">Årlig</div>
+                        </div>
+                    </div>
                     <div class="grid-x">
-                        <div class="large-2 cell">
-                            <button>Daglig</button>
+                        <div class="large-4 cell flexbox-centertext">
+                            <p>Hver<span v-if="selectedTime == 'yearly'">t</span> <span v-if="number > 1">{{number}}.</span> {{selectedTime | danish}}</p>
                         </div>
-                        <div class="large-2 cell">
-                            <button>Ugelig</button>
-                        </div>
-                        <div class="large-2 cell">
-                            <button>Månedlig</button>
-                        </div>
-                        <div class="large-2 cell">
-                            <button>Årlig</button>
+                        <div class="large-8 cell">
+                            <div class="buttons grid-x">
+                                <div class="large-6 cell flexbox-center" @click="subtractNumber">
+                                    <icon class="small-svg" name="user"></icon>
+                                </div>
+                                <div class="large-6 cell flexbox-center" @click="addNumber">
+                                    <icon class="small-svg" name="user"></icon>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="grid-x">
-            <div class="large-1 medium-1 small-1 cell flexbox-center">
-                <icon class="user small-icon" name="user"></icon>
+        <div class="form">
+            <div class="grid-x">
+                <div class="large-3 medium-3 small-3 cell border-bottom">
+                    <icon class="user small-svg" name="user"></icon>
+                    <span>Periode</span>
+                </div>
+                <div class="auto cell border-bottom input-with-icon">
+                    <input type="text" placeholder="Start dato">
+                    <icon class="user small-svg" name="user"></icon>
+                </div>
+                <div class="large-1 cell text-center flexbox-center border-bottom">
+                    <p class="seperator">-</p>
+                </div>
+                <div class="auto cell border-bottom input-with-icon">
+                    <input type="text" placeholder="Slut dato">
+                    <icon class="user small-svg" name="user"></icon>
+                </div>
             </div>
-            <div class="large-3 medium-3 small-3 cell border-bottom">
-                <p>Periode</p>
-            </div>
-            <div class="auto cell border-bottom">
-                <input type="text">
-            </div>
-            <div class="auto cell border-bottom">
-                <input type="text">
-            </div>
+        </div>
+
+        <div class="float-right">
+            <a @click="closeModal">Annuller</a>
+            <a>Gem</a>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-
+    name: 'task-modal-routine',
+    data () {
+        return {
+            selectedTimeStamp: null,
+            selectedTime: 'daily',
+            number: 1
+        }
+    },
+    props: [
+        'data'
+    ],
+    methods: {
+        selectTimeStamp (time) {
+            this.selectedTimeStamp = time
+        },
+        closeModal () {
+            this.$emit('close')
+        },
+        changeTime (selected) {
+            this.selectedTime = selected
+        },
+        subtractNumber () {
+            if (this.number !== 1) {
+                this.number -= 1
+            }
+        },
+        addNumber () {
+            this.number += 1
+        }
+    },
+    filters: {
+        danish (text) {
+            if (text === 'daily') {
+                return 'dag'
+            } if (text === 'weekly') {
+                return 'uge'
+            } if (text === 'monthly') {
+                return 'måned'
+            } if (text === 'yearly') {
+                return 'år'
+            }
+        }
+    }
 }
 </script>
-
-<style>
-
-</style>

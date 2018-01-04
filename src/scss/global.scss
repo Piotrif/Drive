@@ -231,6 +231,10 @@ h6 {
               margin-top: 10px;
               margin-bottom: 10px;
 
+              & svg:first-child {
+                margin-right: 7px;
+              }
+
               & img {
                   width: 20px;
                   margin: auto;
@@ -370,6 +374,14 @@ $circle-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  
+.flexbox-centertext {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .flex-row {
